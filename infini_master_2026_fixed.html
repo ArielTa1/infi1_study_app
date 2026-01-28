@@ -182,19 +182,23 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         }
 
         @media (max-width: 768px) {
-            html, body { min-height: 100dvh; height: auto; overflow-y: auto; overflow-x: hidden; }
-            main { min-height: 100dvh; height: auto; overflow: visible; }
+            html, body { height: 100% !important; overflow: hidden; }
+            .h-screen { height: 100dvh !important; }
+            main { min-height: 100dvh; height: auto; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bottom: calc(120px + env(safe-area-inset-bottom, 16px)); }
             #study-view, #exam-view, #sim-view { height: auto; min-height: 100dvh; }
-            #content-area { overflow: visible; height: auto; -webkit-overflow-scrolling: touch; }
-            #content-area { padding-bottom: calc(64px + env(safe-area-inset-bottom, 16px)); }
-            #exam-view, #sim-paper { overflow-y: auto; height: auto; padding-bottom: calc(64px + env(safe-area-inset-bottom, 16px)); }
+            .overflow-y-auto { overflow-y: visible !important; }
+            #content-area, #exam-view, #sim-paper { overflow: visible !important; height: auto; min-height: 0; }
             #content-area .group.overflow-hidden { overflow: visible !important; }
             .bg-white.rounded-xl,
             .card-inner,
             .card-front,
             .card-back,
             .card-back .flex-1 { overflow: visible !important; height: auto !important; max-height: none !important; }
+            .app-footer-desktop { display: none; }
+            .app-footer-mobile { display: block; }
         }
+
+        .app-footer-mobile { display: none; }
 
         /* Math overflow handling */
         #content-area mjx-container,
@@ -1216,9 +1220,17 @@ mjx-c.mjx-c1D45B.TEX-I::before {
 </div>
 </div>
 </div>
+<footer class="bg-slate-900 text-slate-400 py-3 text-center text-xs md:text-sm border-t border-slate-800 shrink-0 z-30 app-footer-mobile">
+<div class="container mx-auto px-4 flex justify-center items-center gap-1">
+<span>© כל הזכויות שמורות ל</span>
+<span class="font-bold text-indigo-300">אריאל טל</span>
+<span class="mx-1">|</span>
+<span>2026</span>
+</div>
+</footer>
 </main>
 <!-- Footer -->
-<footer class="bg-slate-900 text-slate-400 py-3 text-center text-xs md:text-sm border-t border-slate-800 shrink-0 z-30">
+<footer class="bg-slate-900 text-slate-400 py-3 text-center text-xs md:text-sm border-t border-slate-800 shrink-0 z-30 app-footer-desktop">
 <div class="container mx-auto px-4 flex justify-center items-center gap-1">
 <span>© כל הזכויות שמורות ל</span>
 <span class="font-bold text-indigo-300">אריאל טל</span>
