@@ -182,11 +182,12 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         }
 
         @media (max-width: 768px) {
-            html, body { height: 100%; overflow: hidden; }
-            #study-view, #exam-view, #sim-view { height: 100%; }
-            #content-area { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
-            #content-area { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
-            #exam-view, #sim-paper { overflow: visible; height: auto; }
+            html, body { min-height: 100dvh; height: auto; overflow-y: auto; overflow-x: hidden; }
+            main { min-height: 100dvh; height: auto; overflow: visible; }
+            #study-view, #exam-view, #sim-view { height: auto; min-height: 100dvh; }
+            #content-area { overflow: visible; height: auto; -webkit-overflow-scrolling: touch; }
+            #content-area { padding-bottom: calc(64px + env(safe-area-inset-bottom, 16px)); }
+            #exam-view, #sim-paper { overflow-y: auto; height: auto; padding-bottom: calc(64px + env(safe-area-inset-bottom, 16px)); }
             #content-area .group.overflow-hidden { overflow: visible !important; }
             .bg-white.rounded-xl,
             .card-inner,
