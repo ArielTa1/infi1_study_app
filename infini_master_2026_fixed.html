@@ -115,15 +115,15 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             #content-area h2 { font-size: 1.35rem; line-height: 1.4; }
             #sim-selector h2, #sim-paper h2 { font-size: 1.5rem; line-height: 1.4; }
             #sim-selector .text-xl { font-size: 1.05rem; }
-            #category-tabs { flex-wrap: wrap; gap: 0.5rem; min-width: 0; width: 100%; justify-content: center; }
-            #category-tabs button { white-space: normal; padding: 0.5rem 0.875rem; min-height: 44px; }
+            #category-tabs { flex-wrap: nowrap; gap: 0.5rem; min-width: 0; width: 100%; justify-content: flex-start; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; white-space: nowrap; }
+            #category-tabs button { white-space: nowrap; padding: 0.5rem 0.875rem; min-height: 44px; flex: 0 0 auto; }
             header [class*="bg-indigo-800/50"] { flex-wrap: wrap; overflow: visible; }
             header [class*="bg-indigo-800/50"] button { min-height: 44px; padding: 0.5rem 0.75rem; white-space: normal; }
             header .container { gap: 0.75rem; flex-wrap: wrap; }
-            body { min-height: 100dvh; min-height: -webkit-fill-available; height: 100dvh; }
-            main { overflow-x: hidden; overflow-y: auto; min-height: 100dvh; min-height: -webkit-fill-available; padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
-            #study-view, #exam-view, #sim-view { height: auto; min-height: 100dvh; min-height: -webkit-fill-available; }
-            #content-area, #sim-paper { overflow: visible; }
+            main { overflow-x: hidden; overflow-y: hidden; padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
+            #study-view, #exam-view, #sim-view { height: auto; min-height: 100%; }
+            #content-area { overflow-y: auto; -webkit-overflow-scrolling: touch; }
+            #sim-paper { overflow-y: auto; -webkit-overflow-scrolling: touch; }
             #content-area { padding: 0.75rem; }
             #content-area .grid { grid-template-columns: 1fr; gap: 0.75rem; }
             #content-area .bg-white.rounded-xl { width: 100%; }
@@ -135,9 +135,12 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             #exam-view .flex.gap-4.h-16 { flex-direction: column; height: auto; gap: 0.75rem; }
             #exam-view .flex.gap-4.h-16 { position: sticky; bottom: 0; background: #f1f5f9; padding: 0.5rem; padding-bottom: calc(0.5rem + env(safe-area-inset-bottom)); z-index: 20; border-top: 1px solid #e2e8f0; }
             #exam-view .flex.gap-4.h-16 button { width: 100%; min-height: 44px; }
+            #exam-view { overflow-y: auto; -webkit-overflow-scrolling: touch; }
             #exam-view .w-full.max-w-xl { max-height: none; height: auto; }
-            #exam-view .card-flip { flex: 0 0 auto; min-height: 320px; }
-            #exam-view .card-front, #exam-view .card-back { padding: 1rem; }
+            #exam-view .card-flip { flex: 0 0 auto; min-height: 220px; }
+            #exam-view .card-inner { min-height: 220px; }
+            #exam-view .card-front, #exam-view .card-back { padding: 1rem; min-height: 220px; }
+            #exam-view #card-question { font-size: clamp(16px, 4vw, 20px); line-height: 1.5; }
             #sim-active .sticky-timer { flex-direction: column; align-items: stretch; gap: 0.75rem; }
             #sim-active .sticky-timer .text-2xl { font-size: 1.25rem; }
             #sim-active .sticky-timer .flex.gap-2 { width: 100%; }
