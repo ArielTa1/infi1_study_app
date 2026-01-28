@@ -184,10 +184,12 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         @media (max-width: 768px) {
             html, body { height: 100% !important; overflow: hidden; }
             .h-screen { height: 100dvh !important; }
-            main { min-height: 100dvh; height: auto; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bottom: calc(120px + env(safe-area-inset-bottom, 16px)); }
-            #study-view, #exam-view, #sim-view { height: auto; min-height: 100dvh; }
-            .overflow-y-auto { overflow-y: visible !important; }
-            #content-area, #exam-view, #sim-paper { overflow: visible !important; height: auto; min-height: 0; }
+            main { min-height: 100dvh; height: 100dvh; overflow: hidden; display: flex; flex-direction: column; }
+            #study-view, #exam-view, #sim-view { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+            #content-area, #exam-view, #sim-view { flex: 1 1 auto; min-height: 0; overflow-y: auto !important; -webkit-overflow-scrolling: touch; padding-bottom: calc(120px + env(safe-area-inset-bottom, 16px)); }
+            #sim-paper, #sim-selector { overflow: visible !important; height: auto; }
+            #sim-active { height: auto !important; min-height: 0; flex: 1 1 auto; }
+            #exam-view .w-full.max-w-xl { max-height: none !important; height: auto !important; }
             #content-area .group.overflow-hidden { overflow: visible !important; }
             .bg-white.rounded-xl,
             .card-inner,
@@ -195,10 +197,12 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             .card-back,
             .card-back .flex-1 { overflow: visible !important; height: auto !important; max-height: none !important; }
             .app-footer-desktop { display: none; }
-            .app-footer-mobile { display: block; }
+            .app-footer-mobile { display: none; }
+            .app-footer-mobile-inline { display: block; }
         }
 
         .app-footer-mobile { display: none; }
+        .app-footer-mobile-inline { display: none; }
 
         /* Math overflow handling */
         #content-area mjx-container,
@@ -1175,6 +1179,14 @@ mjx-c.mjx-c1D45B.TEX-I::before {
                 </button>
 </div>
 </div>
+<footer class="bg-slate-900 text-slate-400 py-3 text-center text-xs md:text-sm border-t border-slate-800 shrink-0 z-30 app-footer-mobile-inline w-full">
+<div class="container mx-auto px-4 flex justify-center items-center gap-1">
+<span>© כל הזכויות שמורות ל</span>
+<span class="font-bold text-indigo-300">אריאל טל</span>
+<span class="mx-1">|</span>
+<span>2026</span>
+</div>
+</footer>
 </div>
 <!-- VIEW 3: SIMULATION -->
 <div class="hidden h-full flex flex-col bg-slate-100 transition-opacity duration-300 relative overflow-hidden" id="sim-view">
@@ -1189,6 +1201,14 @@ mjx-c.mjx-c1D45B.TEX-I::before {
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl px-4 pb-10" id="exams-grid">
 <!-- Injected by JS -->
 </div>
+<footer class="bg-slate-900 text-slate-400 py-3 text-center text-xs md:text-sm border-t border-slate-800 shrink-0 z-30 app-footer-mobile-inline w-full mt-6">
+<div class="container mx-auto px-4 flex justify-center items-center gap-1">
+<span>© כל הזכויות שמורות ל</span>
+<span class="font-bold text-indigo-300">אריאל טל</span>
+<span class="mx-1">|</span>
+<span>2026</span>
+</div>
+</footer>
 </div>
 <!-- Active Exam -->
 <div class="hidden flex-col h-full" id="sim-active">
@@ -1217,6 +1237,14 @@ mjx-c.mjx-c1D45B.TEX-I::before {
 <div class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-400 text-sm">סוף המבחן - בהצלחה!</div>
 </div>
 <div class="h-10"></div>
+<footer class="bg-slate-900 text-slate-400 py-3 text-center text-xs md:text-sm border-t border-slate-800 shrink-0 z-30 app-footer-mobile-inline w-full">
+<div class="container mx-auto px-4 flex justify-center items-center gap-1">
+<span>© כל הזכויות שמורות ל</span>
+<span class="font-bold text-indigo-300">אריאל טל</span>
+<span class="mx-1">|</span>
+<span>2026</span>
+</div>
+</footer>
 </div>
 </div>
 </div>
@@ -1785,6 +1813,7 @@ $$
         const data = infiniData[key];
         const isTrig = key === 'trig_identities';
         const wrapperClass = isTrig ? ' trig-identities' : '';
+        const footerHtml = `<footer class="bg-slate-900 text-slate-400 py-3 text-center text-xs md:text-sm border-t border-slate-800 shrink-0 z-30 app-footer-mobile-inline"><div class="container mx-auto px-4 flex justify-center items-center gap-1"><span>© כל הזכויות שמורות ל</span><span class="font-bold text-indigo-300">אריאל טל</span><span class="mx-1">|</span><span>2026</span></div></footer>`;
         let html = `<div class="max-w-5xl mx-auto animate-fade-in pb-10${wrapperClass}"><div class="flex items-center gap-4 mb-6"><div class="w-12 h-12 rounded-2xl bg-${data.color}-100 text-${data.color}-600 flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-3xl">${data.icon}</span></div><div><h2 class="text-2xl font-bold text-slate-800">${data.title}</h2><div class="text-sm text-slate-500 mt-1">גלול למטה להמשך</div></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">`;
         data.items.forEach(item => {
             let qContent;
@@ -1824,7 +1853,7 @@ $$
                 <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0">${aContent}${item.note ? `<div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">${item.note}</div></div>` : ''}</div>
             </div>`;
         });
-        html += `</div></div>`;
+        html += `</div></div>${footerHtml}`;
         container.innerHTML = html;
         scheduleMathJaxTypeset(container);
         if (window.MathJax) {
