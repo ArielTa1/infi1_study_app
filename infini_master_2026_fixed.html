@@ -107,11 +107,18 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
         
         /* Fix for cut-off tabs */
         #category-tabs { padding-right: 1.5rem; padding-left: 1.5rem; }
+        @media (min-width: 481px) {
+            #category-tabs button:not([class*="ring-2"]) {
+                color: #475569;
+                border-color: #e2e8f0;
+                background-color: #ffffff;
+            }
+        }
 
         /* Responsive tweaks */
         @media (max-width: 480px) {
-            html, body { height: 100%; overflow: hidden; }
-            body { font-size: 15px; line-height: 1.5; min-height: 100dvh; }
+            html, body { height: 100%; }
+            body { font-size: 15px; line-height: 1.5; overflow-y: auto; overflow-x: hidden; }
             header h1 { font-size: 1.125rem; }
             #content-area h2 { font-size: 1.35rem; line-height: 1.4; }
             #sim-selector h2, #sim-paper h2 { font-size: 1.5rem; line-height: 1.4; }
@@ -121,9 +128,9 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             header [class*="bg-indigo-800/50"] { flex-wrap: wrap; overflow: visible; }
             header [class*="bg-indigo-800/50"] button { min-height: 44px; padding: 0.5rem 0.75rem; white-space: normal; }
             header .container { gap: 0.75rem; flex-wrap: wrap; }
-            main { height: 100dvh; overflow: hidden; padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
-            #study-view { height: 100%; }
-            #content-area { height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bottom: 24px; }
+            main { overflow: visible; padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
+            #study-view { height: auto; }
+            #content-area { height: auto; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-bottom: 24px; }
             #exam-view, #sim-paper { overflow: visible; height: auto; }
             #content-area { padding: 0.75rem; }
             #content-area .grid { grid-template-columns: 1fr; gap: 0.75rem; }
@@ -137,9 +144,11 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             #exam-view .flex.gap-4.h-16 { position: sticky; bottom: 0; background: #f1f5f9; padding: 0.5rem; padding-bottom: calc(0.5rem + env(safe-area-inset-bottom)); z-index: 20; border-top: 1px solid #e2e8f0; }
             #exam-view .flex.gap-4.h-16 button { width: 100%; min-height: 44px; }
             #exam-view .w-full.max-w-xl { max-height: none; height: auto; }
-            #exam-view .card-flip { flex: 0 0 auto; min-height: 220px; }
-            #exam-view .card-inner { min-height: 220px; }
-            #exam-view .card-front, #exam-view .card-back { padding: 1rem; min-height: 220px; }
+            #exam-view .card-flip { flex: 0 0 auto; min-height: 220px; overflow: visible !important; height: auto !important; max-height: none !important; }
+            #exam-view .card-inner { min-height: 220px; overflow: visible !important; height: auto !important; max-height: none !important; }
+            #exam-view .card-front, #exam-view .card-back { padding: 1rem; min-height: 220px; overflow: visible !important; height: auto !important; max-height: none !important; }
+            #exam-view .card-front .flex-1,
+            #exam-view .card-back .flex-1 { overflow: visible !important; height: auto !important; max-height: none !important; }
             #exam-view #card-question { font-size: clamp(16px, 4vw, 20px); line-height: 1.5; }
             #sim-active .sticky-timer { flex-direction: column; align-items: stretch; gap: 0.75rem; }
             #sim-active .sticky-timer .text-2xl { font-size: 1.25rem; }
@@ -149,6 +158,8 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             #sim-paper .bg-white { padding: 1rem; }
             #sim-paper .text-center.border-b-2 { padding-bottom: 1rem; margin-bottom: 1.25rem; }
             #sim-questions { gap: 1.5rem; }
+            #content-area .group.overflow-hidden { overflow: visible !important; }
+            .bg-white.rounded-xl, .card-inner, .card-front, .card-back { overflow: visible !important; height: auto !important; max-height: none !important; }
             #exams-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
             #exams-grid button { padding: 0.75rem; min-height: 64px; }
             #exams-grid h3 { font-size: 0.95rem; line-height: 1.3; }
