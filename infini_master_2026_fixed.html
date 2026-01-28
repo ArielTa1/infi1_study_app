@@ -1,0 +1,1866 @@
+<html dir="rtl" lang="he"><head>
+
+<script class="injected-ffc2e83d85">
+(function(){'use strict';function l(a){var c=0;return function(){return c<a.length?{done:!1,value:a[c++]}:{done:!0}}}function r(a){var c=typeof Symbol!="undefined"&&Symbol.iterator&&a[Symbol.iterator];if(c)return c.call(a);if(typeof a.length=="number")return{next:l(a)};throw Error(String(a)+" is not an iterable or ArrayLike");}var t=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,c,g){if(a==Array.prototype||a==Object.prototype)return a;a[c]=g.value;return a};
+function u(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var c=0;c<a.length;++c){var g=a[c];if(g&&g.Math==Math)return g}throw Error("Cannot find global object");}var v=u(this);function x(a,c){if(c)a:{var g=v;a=a.split(".");for(var h=0;h<a.length-1;h++){var m=a[h];if(!(m in g))break a;g=g[m]}a=a[a.length-1];h=g[a];c=c(h);c!=h&&c!=null&&t(g,a,{configurable:!0,writable:!0,value:c})}}
+function y(a){if(!(a instanceof Object))throw new TypeError("Iterator result "+a+" is not an object");}function z(){this.o=!1;this.j=null;this.u=void 0;this.g=1;this.i=this.l=0;this.C=this.h=null}function A(a){if(a.o)throw new TypeError("Generator is already running");a.o=!0}z.prototype.v=function(a){this.u=a};function B(a,c){a.h={K:c,L:!0};a.g=a.l||a.i}z.prototype.N=function(){return this.g};z.prototype.getNextAddress=z.prototype.N;z.prototype.O=function(){return this.u};
+z.prototype.getYieldResult=z.prototype.O;z.prototype.return=function(a){this.h={return:a};this.g=this.i};z.prototype["return"]=z.prototype.return;z.prototype.P=function(a){this.h={B:a};this.g=this.i};z.prototype.jumpThroughFinallyBlocks=z.prototype.P;z.prototype.A=function(a,c){this.g=c;return{value:a}};z.prototype.yield=z.prototype.A;z.prototype.T=function(a,c){a=r(a);var g=a.next();y(g);if(g.done)this.u=g.value,this.g=c;else return this.j=a,this.A(g.value,c)};z.prototype.yieldAll=z.prototype.T;
+z.prototype.B=function(a){this.g=a};z.prototype.jumpTo=z.prototype.B;z.prototype.F=function(){this.g=0};z.prototype.jumpToEnd=z.prototype.F;z.prototype.H=function(a,c){this.l=a;c!=void 0&&(this.i=c)};z.prototype.setCatchFinallyBlocks=z.prototype.H;z.prototype.S=function(a){this.l=0;this.i=a||0};z.prototype.setFinallyBlock=z.prototype.S;z.prototype.G=function(a,c){this.g=a;this.l=c||0};z.prototype.leaveTryBlock=z.prototype.G;z.prototype.D=function(a){this.l=a||0;a=this.h.K;this.h=null;return a};
+z.prototype.enterCatchBlock=z.prototype.D;z.prototype.J=function(a,c,g){g?this.C[g]=this.h:this.C=[this.h];this.l=a||0;this.i=c||0};z.prototype.enterFinallyBlock=z.prototype.J;z.prototype.R=function(a,c){c=this.C.splice(c||0)[0];(c=this.h=this.h||c)?c.L?this.g=this.l||this.i:c.B!=void 0&&this.i<c.B?(this.g=c.B,this.h=null):this.g=this.i:this.g=a};z.prototype.leaveFinallyBlock=z.prototype.R;z.prototype.M=function(a){return new C(a)};z.prototype.forIn=z.prototype.M;
+function C(a){this.i=a;this.g=[];for(var c in a)this.g.push(c);this.g.reverse()}C.prototype.h=function(){for(;this.g.length>0;){var a=this.g.pop();if(a in this.i)return a}return null};C.prototype.getNext=C.prototype.h;function F(a){this.g=new z;this.h=a}function G(a,c){A(a.g);var g=a.g.j;if(g)return H(a,"return"in g?g["return"]:function(h){return{value:h,done:!0}},c,a.g.return);a.g.return(c);return I(a)}
+function H(a,c,g,h){try{var m=c.call(a.g.j,g);y(m);if(!m.done)return a.g.o=!1,m;var n=m.value}catch(f){return a.g.j=null,B(a.g,f),I(a)}a.g.j=null;h.call(a.g,n);return I(a)}function I(a){for(;a.g.g;)try{var c=a.h(a.g);if(c)return a.g.o=!1,{value:c.value,done:!1}}catch(g){a.g.u=void 0,B(a.g,g)}a.g.o=!1;if(a.g.h){c=a.g.h;a.g.h=null;if(c.L)throw c.K;return{value:c.return,done:!0}}return{value:void 0,done:!0}}
+function J(a){this.next=function(c){A(a.g);a.g.j?c=H(a,a.g.j.next,c,a.g.v):(a.g.v(c),c=I(a));return c};this.throw=function(c){A(a.g);a.g.j?c=H(a,a.g.j["throw"],c,a.g.v):(B(a.g,c),c=I(a));return c};this.return=function(c){return G(a,c)};this[Symbol.iterator]=function(){return this}}function K(a){function c(h){return a.next(h)}function g(h){return a.throw(h)}return new Promise(function(h,m){function n(f){f.done?h(f.value):Promise.resolve(f.value).then(c,g).then(n,m)}n(a.next())})}
+x("Symbol",function(a){function c(n){if(this instanceof c)throw new TypeError("Symbol is not a constructor");return new g(h+(n||"")+"_"+m++,n)}function g(n,f){this.g=n;t(this,"description",{configurable:!0,writable:!0,value:f})}if(a)return a;g.prototype.toString=function(){return this.g};var h="jscomp_symbol_"+(Math.random()*1E9>>>0)+"_",m=0;return c});
+x("Symbol.iterator",function(a){if(a)return a;a=Symbol("Symbol.iterator");t(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return L(l(this))}});return a});function L(a){a={next:a};a[Symbol.iterator]=function(){return this};return a}
+x("Promise",function(a){function c(f){this.h=0;this.i=void 0;this.g=[];this.u=!1;var b=this.j();try{f(b.resolve,b.reject)}catch(d){b.reject(d)}}function g(){this.g=null}function h(f){return f instanceof c?f:new c(function(b){b(f)})}if(a)return a;g.prototype.h=function(f){if(this.g==null){this.g=[];var b=this;this.i(function(){b.l()})}this.g.push(f)};var m=v.setTimeout;g.prototype.i=function(f){m(f,0)};g.prototype.l=function(){for(;this.g&&this.g.length;){var f=this.g;this.g=[];for(var b=0;b<f.length;++b){var d=
+f[b];f[b]=null;try{d()}catch(e){this.j(e)}}}this.g=null};g.prototype.j=function(f){this.i(function(){throw f;})};c.prototype.j=function(){function f(e){return function(k){d||(d=!0,e.call(b,k))}}var b=this,d=!1;return{resolve:f(this.F),reject:f(this.l)}};c.prototype.F=function(f){if(f===this)this.l(new TypeError("A Promise cannot resolve to itself"));else if(f instanceof c)this.H(f);else{a:switch(typeof f){case "object":var b=f!=null;break a;case "function":b=!0;break a;default:b=!1}b?this.D(f):this.o(f)}};
+c.prototype.D=function(f){var b=void 0;try{b=f.then}catch(d){this.l(d);return}typeof b=="function"?this.J(b,f):this.o(f)};c.prototype.l=function(f){this.v(2,f)};c.prototype.o=function(f){this.v(1,f)};c.prototype.v=function(f,b){if(this.h!=0)throw Error("Cannot settle("+f+", "+b+"): Promise already settled in state"+this.h);this.h=f;this.i=b;this.h===2&&this.G();this.C()};c.prototype.G=function(){var f=this;m(function(){if(f.A()){var b=v.console;typeof b!=="undefined"&&b.error(f.i)}},1)};c.prototype.A=
+function(){if(this.u)return!1;var f=v.CustomEvent,b=v.Event,d=v.dispatchEvent;if(typeof d==="undefined")return!0;typeof f==="function"?f=new f("unhandledrejection",{cancelable:!0}):typeof b==="function"?f=new b("unhandledrejection",{cancelable:!0}):(f=v.document.createEvent("CustomEvent"),f.initCustomEvent("unhandledrejection",!1,!0,f));f.promise=this;f.reason=this.i;return d(f)};c.prototype.C=function(){if(this.g!=null){for(var f=0;f<this.g.length;++f)n.h(this.g[f]);this.g=null}};var n=new g;c.prototype.H=
+function(f){var b=this.j();f.I(b.resolve,b.reject)};c.prototype.J=function(f,b){var d=this.j();try{f.call(b,d.resolve,d.reject)}catch(e){d.reject(e)}};c.prototype.then=function(f,b){function d(p,w){return typeof p=="function"?function(D){try{e(p(D))}catch(E){k(E)}}:w}var e,k,q=new c(function(p,w){e=p;k=w});this.I(d(f,e),d(b,k));return q};c.prototype.catch=function(f){return this.then(void 0,f)};c.prototype.I=function(f,b){function d(){switch(e.h){case 1:f(e.i);break;case 2:b(e.i);break;default:throw Error("Unexpected state: "+
+e.h);}}var e=this;this.g==null?n.h(d):this.g.push(d);this.u=!0};c.resolve=h;c.reject=function(f){return new c(function(b,d){d(f)})};c.race=function(f){return new c(function(b,d){for(var e=r(f),k=e.next();!k.done;k=e.next())h(k.value).I(b,d)})};c.all=function(f){var b=r(f),d=b.next();return d.done?h([]):new c(function(e,k){function q(D){return function(E){p[D]=E;w--;w==0&&e(p)}}var p=[],w=0;do p.push(void 0),w++,h(d.value).I(q(p.length-1),k),d=b.next();while(!d.done)})};return c});
+function M(a,c){return Object.prototype.hasOwnProperty.call(a,c)}x("Object.is",function(a){return a?a:function(c,g){return c===g?c!==0||1/c===1/g:c!==c&&g!==g}});x("Array.prototype.includes",function(a){return a?a:function(c,g){var h=this;h instanceof String&&(h=String(h));var m=h.length;g=g||0;for(g<0&&(g=Math.max(g+m,0));g<m;g++){var n=h[g];if(n===c||Object.is(n,c))return!0}return!1}});
+x("String.prototype.includes",function(a){return a?a:function(c,g){if(this==null)throw new TypeError("The 'this' value for String.prototype.includes must not be null or undefined");if(c instanceof RegExp)throw new TypeError("First argument to String.prototype.includes must not be a regular expression");return this.indexOf(c,g||0)!==-1}});
+x("WeakMap",function(a){function c(d){this.g=(b+=Math.random()+1).toString();if(d){d=r(d);for(var e;!(e=d.next()).done;)e=e.value,this.set(e[0],e[1])}}function g(){}function h(d){var e=typeof d;return e==="object"&&d!==null||e==="function"}function m(d){if(!M(d,f)){var e=new g;t(d,f,{value:e})}}function n(d){var e=Object[d];e&&(Object[d]=function(k){if(k instanceof g)return k;Object.isExtensible(k)&&m(k);return e(k)})}if(function(){if(!a||!Object.seal)return!1;try{var d=Object.seal({}),e=Object.seal({}),
+k=new a([[d,2],[e,3]]);if(k.get(d)!=2||k.get(e)!=3)return!1;k.delete(d);k.set(e,4);return!k.has(d)&&k.get(e)==4}catch(q){return!1}}())return a;var f="$jscomp_hidden_"+Math.random();n("freeze");n("preventExtensions");n("seal");var b=0;c.prototype.set=function(d,e){if(!h(d))throw Error("Invalid WeakMap key");m(d);if(!M(d,f))throw Error("WeakMap key fail: "+d);d[f][this.g]=e;return this};c.prototype.get=function(d){return h(d)&&M(d,f)?d[f][this.g]:void 0};c.prototype.has=function(d){return h(d)&&M(d,
+f)&&M(d[f],this.g)};c.prototype.delete=function(d){return h(d)&&M(d,f)&&M(d[f],this.g)?delete d[f][this.g]:!1};return c});
+x("Map",function(a){function c(){var b={};return b.m=b.next=b.head=b}function g(b,d){var e=b[1];return L(function(){if(e){for(;e.head!=b[1];)e=e.m;for(;e.next!=e.head;)return e=e.next,{done:!1,value:d(e)};e=null}return{done:!0,value:void 0}})}function h(b,d){var e=d&&typeof d;e=="object"||e=="function"?n.has(d)?e=n.get(d):(e=""+ ++f,n.set(d,e)):e="p_"+d;var k=b[0][e];if(k&&M(b[0],e))for(b=0;b<k.length;b++){var q=k[b];if(d!==d&&q.key!==q.key||d===q.key)return{id:e,list:k,index:b,entry:q}}return{id:e,
+list:k,index:-1,entry:void 0}}function m(b){this[0]={};this[1]=c();this.size=0;if(b){b=r(b);for(var d;!(d=b.next()).done;)d=d.value,this.set(d[0],d[1])}}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var b=Object.seal({x:4}),d=new a(r([[b,"s"]]));if(d.get(b)!="s"||d.size!=1||d.get({x:4})||d.set({x:4},"t")!=d||d.size!=2)return!1;var e=d.entries(),k=e.next();if(k.done||k.value[0]!=b||k.value[1]!="s")return!1;k=e.next();return k.done||k.value[0].x!=
+4||k.value[1]!="t"||!e.next().done?!1:!0}catch(q){return!1}}())return a;var n=new WeakMap;m.prototype.set=function(b,d){b=b===0?0:b;var e=h(this,b);e.list||(e.list=this[0][e.id]=[]);e.entry?e.entry.value=d:(e.entry={next:this[1],m:this[1].m,head:this[1],key:b,value:d},e.list.push(e.entry),this[1].m.next=e.entry,this[1].m=e.entry,this.size++);return this};m.prototype.delete=function(b){b=h(this,b);return b.entry&&b.list?(b.list.splice(b.index,1),b.list.length||delete this[0][b.id],b.entry.m.next=b.entry.next,
+b.entry.next.m=b.entry.m,b.entry.head=null,this.size--,!0):!1};m.prototype.clear=function(){this[0]={};this[1]=this[1].m=c();this.size=0};m.prototype.has=function(b){return!!h(this,b).entry};m.prototype.get=function(b){return(b=h(this,b).entry)&&b.value};m.prototype.entries=function(){return g(this,function(b){return[b.key,b.value]})};m.prototype.keys=function(){return g(this,function(b){return b.key})};m.prototype.values=function(){return g(this,function(b){return b.value})};m.prototype.forEach=
+function(b,d){for(var e=this.entries(),k;!(k=e.next()).done;)k=k.value,b.call(d,k[1],k[0],this)};m.prototype[Symbol.iterator]=m.prototype.entries;var f=0;return m});
+x("Set",function(a){function c(g){this.g=new Map;if(g){g=r(g);for(var h;!(h=g.next()).done;)this.add(h.value)}this.size=this.g.size}if(function(){if(!a||typeof a!="function"||!a.prototype.entries||typeof Object.seal!="function")return!1;try{var g=Object.seal({x:4}),h=new a(r([g]));if(!h.has(g)||h.size!=1||h.add(g)!=h||h.size!=1||h.add({x:4})!=h||h.size!=2)return!1;var m=h.entries(),n=m.next();if(n.done||n.value[0]!=g||n.value[1]!=g)return!1;n=m.next();return n.done||n.value[0]==g||n.value[0].x!=4||
+n.value[1]!=n.value[0]?!1:m.next().done}catch(f){return!1}}())return a;c.prototype.add=function(g){g=g===0?0:g;this.g.set(g,g);this.size=this.g.size;return this};c.prototype.delete=function(g){g=this.g.delete(g);this.size=this.g.size;return g};c.prototype.clear=function(){this.g.clear();this.size=0};c.prototype.has=function(g){return this.g.has(g)};c.prototype.entries=function(){return this.g.entries()};c.prototype.values=function(){return this.g.values()};c.prototype.keys=c.prototype.values;c.prototype[Symbol.iterator]=
+c.prototype.values;c.prototype.forEach=function(g,h){var m=this;this.g.forEach(function(n){return g.call(h,n,n,m)})};return c});(function(){function a(){return n?Promise.resolve(n):f?f:f=fetch("https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json").then(function(b){if(!b.ok)throw Error("HTTP error! status: "+b.status+" fetching https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json");return b.json()}).then(function(b){if(!Array.isArray(b))throw new TypeError("Fetched icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json is not an array.");
+return n=b}).catch(function(b){console.error("IconChecker: Failed to load valid icon names from https://www.gstatic.com/bard-maui/resources/material-design-icon-names.804824289.json.",b);f=null;throw b;})}function c(b){var d,e,k,q;return K(new J(new F(function(p){switch(p.g){case 1:d=(b.textContent||"").trim();if(!d||b.classList.contains("js-replaced-missing-icon")&&d==="radio_button_unchecked")return p.return();e=window.getComputedStyle(b);if(e.display==="none"||e.visibility==="hidden")return p.return();
+p.H(2);return p.A(a(),4);case 4:k=p.u;p.G(3);break;case 2:return p.D(),console.warn('IconChecker: Skipping check for icon "'+d+'" as valid names could not be loaded.'),p.return();case 3:(q=k.includes(d))?b.classList.contains("js-replaced-missing-icon")&&b.classList.remove("js-replaced-missing-icon"):d==="radio_button_unchecked"&&b.classList.contains("js-replaced-missing-icon")||(b.textContent="radio_button_unchecked",b.classList.add("js-replaced-missing-icon")),p.F()}})))}function g(b){b=b===void 0?
+document.body:b;b.querySelectorAll(m).forEach(function(d){c(d)})}function h(){a().catch(function(){});document.fonts.ready.then(function(){requestAnimationFrame(function(){g(document.body);(new MutationObserver(function(b){var d=new Set;b=r(b);for(var e=b.next();!e.done;e=b.next())if(e=e.value,e.type==="childList")e.addedNodes.forEach(function(q){q.nodeType===Node.ELEMENT_NODE&&(q.matches(m)&&d.add(q),q.querySelectorAll(m).forEach(function(p){d.add(p)}))});else if(e.type==="attributes"&&e.attributeName===
+"class"){var k=e.target;e.target.nodeType===Node.ELEMENT_NODE&&k.matches(m)&&d.add(k)}else e.type==="characterData"&&e.target.parentNode&&(e=e.target.parentNode,e.nodeType===Node.ELEMENT_NODE&&e.matches(m)&&d.add(e));d.size>0&&setTimeout(function(){d.forEach(function(q){c(q)})},500)})).observe(document.body,{childList:!0,subtree:!0,attributes:!0,attributeFilter:["class"],characterData:!0})})}).catch(function(b){console.error("IconChecker: Font loading error. Scanning icons anyway.",b);requestAnimationFrame(function(){g(document.body)})})}
+var m=["material-icons","material-symbols-outlined","material-symbols-rounded","material-symbols-sharp"].map(function(b){return"."+b}).join(","),n=null,f=null;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",function(){h()}):h()})();}).call(this);
+
+
+</script>
+
+<meta name="surface-hint" content="desktop-responsive" data-hint="injected-ffc2e83d85">
+
+
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>אינפי 1 - המדריך המלא והאינטראקטיבי</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&amp;family=Rubik:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
+<!-- MathJax -->
+<script>
+        window.MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            macros: { R: "{\\mathbb{R}}", N: "{\\mathbb{N}}" }
+          },
+          svg: { fontCache: 'global' },
+          startup: { typeset: false }
+        };
+    </script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style>
+        body { font-family: 'Assistant', sans-serif; background-color: #f8fafc; }
+        .math-font { font-family: 'Rubik', sans-serif; }
+        .card-flip { perspective: 1000px; }
+        .card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
+        .card-flip.flipped .card-inner { transform: rotateY(180deg); }
+        .card-front, .card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 1rem; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .card-back { transform: rotateY(180deg); background-color: #e0e7ff; }
+        .dir-ltr { direction: ltr; }
+        .dir-rtl { direction: rtl; }
+        .text-right { text-align: right; }
+        .zero-bounded-tight { line-height: 1.35; }
+        .zero-bounded-tight mjx-container { margin: 0.15em 0 !important; }
+        .trig-identities .identity-title {
+            overflow: visible;
+            height: auto;
+            min-height: unset;
+            line-height: normal;
+            white-space: normal;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .trig-identities .identity-title mjx-container { max-width: 100% !important; white-space: normal; }
+        .trig-identities .identity-title mjx-container[jax="CHTML"] { overflow-x: auto; }
+        .trig-identities .identity-title--small { font-size: 1.05rem; line-height: 1.5; }
+        .trig-identities .identity-card { overflow: visible; }
+        .trig-identities .identity-card-header { height: auto; min-height: unset; overflow: visible; }
+        /* Sticky timer */
+        .sticky-timer { position: sticky; top: 0; z-index: 50; }
+        /* Hide scrollbar */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Sim Styles */
+        .sim-text { text-align: right; direction: rtl; line-height: 1.6; }
+        .q-part { margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px dashed #e2e8f0; }
+        .q-part:last-child { border-bottom: none; }
+        
+        /* Fix for cut-off tabs */
+        #category-tabs { padding-right: 1.5rem; padding-left: 1.5rem; }
+
+        /* Responsive tweaks */
+        @media (max-width: 480px) {
+            body { font-size: 15px; line-height: 1.5; }
+            header h1 { font-size: 1.125rem; }
+            #content-area h2 { font-size: 1.35rem; line-height: 1.4; }
+            #sim-selector h2, #sim-paper h2 { font-size: 1.5rem; line-height: 1.4; }
+            #sim-selector .text-xl { font-size: 1.05rem; }
+            #category-tabs { flex-wrap: wrap; gap: 0.5rem; min-width: 0; width: 100%; justify-content: center; }
+            #category-tabs button { white-space: normal; padding: 0.5rem 0.875rem; min-height: 44px; }
+            header [class*="bg-indigo-800/50"] { flex-wrap: wrap; overflow: visible; }
+            header [class*="bg-indigo-800/50"] button { min-height: 44px; padding: 0.5rem 0.75rem; white-space: normal; }
+            header .container { gap: 0.75rem; flex-wrap: wrap; }
+            main { overflow-x: hidden; }
+            #content-area { padding: 0.75rem; }
+            #content-area .grid { grid-template-columns: 1fr; gap: 0.75rem; }
+            #content-area .bg-white.rounded-xl { width: 100%; }
+            #content-area .p-5 { padding: 1rem; }
+            #content-area .h-24 { height: auto; min-height: 5rem; }
+            .trig-identities .identity-card-header { padding: 0.75rem; }
+            #exam-view { padding: 0.75rem; }
+            #exam-view .flex.justify-between.items-end { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+            #exam-view .flex.gap-4.h-16 { flex-direction: column; height: auto; gap: 0.75rem; }
+            #exam-view .flex.gap-4.h-16 button { width: 100%; min-height: 44px; }
+            #exam-view .card-front, #exam-view .card-back { padding: 1rem; }
+            #sim-active .sticky-timer { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+            #sim-active .sticky-timer .text-2xl { font-size: 1.25rem; }
+            #sim-active .sticky-timer .flex.gap-2 { width: 100%; }
+            #sim-active .sticky-timer .flex.gap-2 button { width: 100%; min-height: 44px; }
+            #sim-paper { padding: 0.75rem; }
+            #sim-paper .bg-white { padding: 1rem; }
+            #sim-paper .text-center.border-b-2 { padding-bottom: 1rem; margin-bottom: 1.25rem; }
+            #sim-questions { gap: 1.5rem; }
+            button, input, select, textarea { min-height: 44px; font-size: 16px; }
+        }
+
+        @media (min-width: 481px) and (max-width: 1024px) {
+            #category-tabs { flex-wrap: wrap; gap: 0.75rem; min-width: 0; width: 100%; justify-content: center; }
+            #category-tabs button { white-space: normal; min-height: 44px; }
+            header [class*="bg-indigo-800/50"] { flex-wrap: wrap; overflow: visible; }
+            header [class*="bg-indigo-800/50"] button { min-height: 44px; }
+            #content-area { padding: 1rem; }
+            #content-area .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+            #content-area .p-5 { padding: 1.125rem; }
+            #sim-active .sticky-timer .flex.gap-2 button { min-height: 44px; }
+            button, input, select, textarea { min-height: 44px; font-size: 16px; }
+        }
+
+        /* Math overflow handling */
+        #content-area mjx-container,
+        #exam-view mjx-container,
+        #sim-view mjx-container {
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        #content-area .font-math,
+        #exam-view .font-math,
+        #sim-view .font-math {
+            max-width: 100%;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.right-4{right:1rem}.top-4{top:1rem}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.mx-1{margin-left:0.25rem;margin-right:0.25rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-auto{margin-top:auto}.mb-3{margin-bottom:0.75rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-10{height:2.5rem}.h-16{height:4rem}.h-8{height:2rem}.h-full{height:100%}.h-screen{height:100vh}.h-12{height:3rem}.h-24{height:6rem}.max-h-\[650px\]{max-height:650px}.min-h-screen{min-height:100vh}.w-16{width:4rem}.w-8{width:2rem}.w-full{width:100%}.w-12{width:3rem}.min-w-max{min-width:max-content}.min-w-0{min-width:0px}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-5xl{max-width:64rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.rotate-45{--tw-rotate:45deg;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-5{gap:1.25rem}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-sm{border-radius:0.125rem}.rounded-xl{border-radius:0.75rem}.rounded{border-radius:0.25rem}.border{border-width:1px}.border-2{border-width:2px}.border-\[3px\]{border-width:3px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-rose-100{--tw-border-opacity:1;border-color:rgb(255 228 230 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-orange-200{--tw-border-opacity:1;border-color:rgb(254 215 170 / var(--tw-border-opacity, 1))}.border-teal-200{--tw-border-opacity:1;border-color:rgb(153 246 228 / var(--tw-border-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-indigo-200{--tw-bg-opacity:1;background-color:rgb(199 210 254 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-700{--tw-bg-opacity:1;background-color:rgb(67 56 202 / var(--tw-bg-opacity, 1))}.bg-indigo-800\/50{background-color:rgb(55 48 163 / 0.5)}.bg-rose-600{--tw-bg-opacity:1;background-color:rgb(225 29 72 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-600{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-teal-100{--tw-bg-opacity:1;background-color:rgb(204 251 241 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.p-1{padding:0.25rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.p-2{padding:0.5rem}.p-5{padding:1.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.pb-10{padding-bottom:2.5rem}.pb-12{padding-bottom:3rem}.pb-6{padding-bottom:1.5rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.pb-2{padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-7xl{font-size:4.5rem;line-height:1}.text-9xl{font-size:8rem;line-height:1}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-indigo-100{--tw-text-opacity:1;color:rgb(224 231 255 / var(--tw-text-opacity, 1))}.text-indigo-200{--tw-text-opacity:1;color:rgb(199 210 254 / var(--tw-text-opacity, 1))}.text-indigo-300{--tw-text-opacity:1;color:rgb(165 180 252 / var(--tw-text-opacity, 1))}.text-indigo-500{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-indigo-600{--tw-text-opacity:1;color:rgb(79 70 229 / var(--tw-text-opacity, 1))}.text-indigo-900{--tw-text-opacity:1;color:rgb(49 46 129 / var(--tw-text-opacity, 1))}.text-rose-200{--tw-text-opacity:1;color:rgb(254 205 211 / var(--tw-text-opacity, 1))}.text-rose-400{--tw-text-opacity:1;color:rgb(251 113 133 / var(--tw-text-opacity, 1))}.text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-orange-800{--tw-text-opacity:1;color:rgb(154 52 18 / var(--tw-text-opacity, 1))}.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.text-teal-800{--tw-text-opacity:1;color:rgb(17 94 89 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.opacity-90{opacity:0.9}.opacity-\[0\.03\]{opacity:0.03}.opacity-0{opacity:0}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-amber-500{--tw-ring-opacity:1;--tw-ring-color:rgb(245 158 11 / var(--tw-ring-opacity, 1))}.ring-blue-500{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.ring-indigo-500{--tw-ring-opacity:1;--tw-ring-color:rgb(99 102 241 / var(--tw-ring-opacity, 1))}.ring-orange-500{--tw-ring-opacity:1;--tw-ring-color:rgb(249 115 22 / var(--tw-ring-opacity, 1))}.ring-teal-500{--tw-ring-opacity:1;--tw-ring-color:rgb(20 184 166 / var(--tw-ring-opacity, 1))}.ring-emerald-500{--tw-ring-opacity:1;--tw-ring-color:rgb(16 185 129 / var(--tw-ring-opacity, 1))}.ring-offset-1{--tw-ring-offset-width:1px}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:border-rose-200:hover{--tw-border-opacity:1;border-color:rgb(254 205 211 / var(--tw-border-opacity, 1))}.hover\:bg-emerald-200:hover{--tw-bg-opacity:1;background-color:rgb(167 243 208 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-50:hover{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}.hover\:bg-rose-600\/50:hover{background-color:rgb(225 29 72 / 0.5)}.hover\:bg-rose-700:hover{--tw-bg-opacity:1;background-color:rgb(190 18 60 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-800:hover{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:block{display:block}.sm\:inline{display:inline}}@media (min-width: 768px){.md\:block{display:block}.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:gap-2{gap:0.5rem}.md\:gap-3{gap:0.75rem}.md\:p-12{padding:3rem}.md\:p-6{padding:1.5rem}.md\:p-8{padding:2rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-math {
+  display: inline-block;
+  text-align: left;
+  line-height: 0;
+  text-indent: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 100%;
+  font-size-adjust: none;
+  letter-spacing: normal;
+  border-collapse: collapse;
+  word-wrap: normal;
+  word-spacing: normal;
+  white-space: nowrap;
+  direction: ltr;
+  padding: 1px 0;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="CHTML"][display="true"][width="full"] {
+  display: flex;
+}
+
+mjx-container[jax="CHTML"][display="true"] mjx-math {
+  padding: 0;
+}
+
+mjx-container[jax="CHTML"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="CHTML"][justify="right"] {
+  text-align: right;
+}
+
+mjx-munder {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-over {
+  text-align: left;
+}
+
+mjx-munder:not([limits="false"]) {
+  display: inline-table;
+}
+
+mjx-munder > mjx-row {
+  text-align: left;
+}
+
+mjx-under {
+  padding-bottom: .1em;
+}
+
+mjx-mo {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-stretchy-h {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-stretchy-h > * {
+  display: table-cell;
+  width: 0;
+}
+
+mjx-stretchy-h > * > mjx-c {
+  display: inline-block;
+  transform: scalex(1.0000001);
+}
+
+mjx-stretchy-h > * > mjx-c::before {
+  display: inline-block;
+  width: initial;
+}
+
+mjx-stretchy-h > mjx-ext {
+  /* IE */ overflow: hidden;
+  /* others */ overflow: clip visible;
+  width: 100%;
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c::before {
+  transform: scalex(500);
+}
+
+mjx-stretchy-h > mjx-ext > mjx-c {
+  width: 0;
+}
+
+mjx-stretchy-h > mjx-beg > mjx-c {
+  margin-right: -.1em;
+}
+
+mjx-stretchy-h > mjx-end > mjx-c {
+  margin-left: -.1em;
+}
+
+mjx-stretchy-v {
+  display: inline-block;
+}
+
+mjx-stretchy-v > * {
+  display: block;
+}
+
+mjx-stretchy-v > mjx-beg {
+  height: 0;
+}
+
+mjx-stretchy-v > mjx-end > mjx-c {
+  display: block;
+}
+
+mjx-stretchy-v > * > mjx-c {
+  transform: scaley(1.0000001);
+  transform-origin: left center;
+  overflow: hidden;
+}
+
+mjx-stretchy-v > mjx-ext {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  border: 0px solid transparent;
+  /* IE */ overflow: hidden;
+  /* others */ overflow: visible clip;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c::before {
+  width: initial;
+  box-sizing: border-box;
+}
+
+mjx-stretchy-v > mjx-ext > mjx-c {
+  transform: scaleY(500) translateY(.075em);
+  overflow: visible;
+}
+
+mjx-mark {
+  display: inline-block;
+  height: 0px;
+}
+
+mjx-c {
+  display: inline-block;
+}
+
+mjx-utext {
+  display: inline-block;
+  padding: .75em 0 .2em 0;
+}
+
+mjx-TeXAtom {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mi {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mn {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-mfrac {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-frac {
+  display: inline-block;
+  vertical-align: 0.17em;
+  padding: 0 .22em;
+}
+
+mjx-frac[type="d"] {
+  vertical-align: .04em;
+}
+
+mjx-frac[delims] {
+  padding: 0 .1em;
+}
+
+mjx-frac[atop] {
+  padding: 0 .12em;
+}
+
+mjx-frac[atop][delims] {
+  padding: 0;
+}
+
+mjx-dtable {
+  display: inline-table;
+  width: 100%;
+}
+
+mjx-dtable > * {
+  font-size: 2000%;
+}
+
+mjx-dbox {
+  display: block;
+  font-size: 5%;
+}
+
+mjx-num {
+  display: block;
+  text-align: center;
+}
+
+mjx-den {
+  display: block;
+  text-align: center;
+}
+
+mjx-mfrac[bevelled] > mjx-num {
+  display: inline-block;
+}
+
+mjx-mfrac[bevelled] > mjx-den {
+  display: inline-block;
+}
+
+mjx-den[align="right"], mjx-num[align="right"] {
+  text-align: right;
+}
+
+mjx-den[align="left"], mjx-num[align="left"] {
+  text-align: left;
+}
+
+mjx-nstrut {
+  display: inline-block;
+  height: .054em;
+  width: 0;
+  vertical-align: -.054em;
+}
+
+mjx-nstrut[type="d"] {
+  height: .217em;
+  vertical-align: -.217em;
+}
+
+mjx-dstrut {
+  display: inline-block;
+  height: .505em;
+  width: 0;
+}
+
+mjx-dstrut[type="d"] {
+  height: .726em;
+}
+
+mjx-line {
+  display: block;
+  box-sizing: border-box;
+  min-height: 1px;
+  height: .06em;
+  border-top: .06em solid;
+  margin: .06em -.1em;
+  overflow: hidden;
+}
+
+mjx-line[type="d"] {
+  margin: .18em -.1em;
+}
+
+mjx-mrow {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-msup {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-msqrt {
+  display: inline-block;
+  text-align: left;
+}
+
+mjx-root {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+mjx-surd {
+  display: inline-block;
+  vertical-align: top;
+}
+
+mjx-sqrt {
+  display: inline-block;
+  padding-top: .07em;
+}
+
+mjx-sqrt > mjx-box {
+  border-top: .07em solid;
+}
+
+mjx-sqrt.mjx-tall > mjx-box {
+  padding-left: .3em;
+  margin-left: -.3em;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+
+mjx-c.mjx-c6C::before {
+  padding: 0.694em 0.278em 0 0;
+  content: "l";
+}
+
+mjx-c.mjx-c69::before {
+  padding: 0.669em 0.278em 0 0;
+  content: "i";
+}
+
+mjx-c.mjx-c6D::before {
+  padding: 0.442em 0.833em 0 0;
+  content: "m";
+}
+
+mjx-c.mjx-c1D465.TEX-I::before {
+  padding: 0.442em 0.572em 0.011em 0;
+  content: "x";
+}
+
+mjx-c.mjx-c2192::before {
+  padding: 0.511em 1em 0.011em 0;
+  content: "\2192";
+}
+
+mjx-c.mjx-c30::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "0";
+}
+
+mjx-c.mjx-c73::before {
+  padding: 0.448em 0.394em 0.011em 0;
+  content: "s";
+}
+
+mjx-c.mjx-c6E::before {
+  padding: 0.442em 0.556em 0 0;
+  content: "n";
+}
+
+mjx-c.mjx-c2061::before {
+  padding: 0 0 0 0;
+  content: "";
+}
+
+mjx-c.mjx-c31::before {
+  padding: 0.666em 0.5em 0 0;
+  content: "1";
+}
+
+mjx-c.mjx-c33::before {
+  padding: 0.665em 0.5em 0.022em 0;
+  content: "3";
+}
+
+mjx-c.mjx-c22C5::before {
+  padding: 0.31em 0.278em 0 0;
+  content: "\22C5";
+}
+
+mjx-c.mjx-c2212::before {
+  padding: 0.583em 0.778em 0.082em 0;
+  content: "\2212";
+}
+
+mjx-c.mjx-c63::before {
+  padding: 0.448em 0.444em 0.011em 0;
+  content: "c";
+}
+
+mjx-c.mjx-c6F::before {
+  padding: 0.448em 0.5em 0.01em 0;
+  content: "o";
+}
+
+mjx-c.mjx-c32::before {
+  padding: 0.666em 0.5em 0 0;
+  content: "2";
+}
+
+mjx-c.mjx-c2F::before {
+  padding: 0.75em 0.5em 0.25em 0;
+  content: "/";
+}
+
+mjx-c.mjx-c28::before {
+  padding: 0.75em 0.389em 0.25em 0;
+  content: "(";
+}
+
+mjx-c.mjx-c2B::before {
+  padding: 0.583em 0.778em 0.082em 0;
+  content: "+";
+}
+
+mjx-c.mjx-c29::before {
+  padding: 0.75em 0.389em 0.25em 0;
+  content: ")";
+}
+
+mjx-c.mjx-c1D452.TEX-I::before {
+  padding: 0.442em 0.466em 0.011em 0;
+  content: "e";
+}
+
+mjx-c.mjx-c35::before {
+  padding: 0.666em 0.5em 0.022em 0;
+  content: "5";
+}
+
+mjx-c.mjx-c221E::before {
+  padding: 0.442em 1em 0.011em 0;
+  content: "\221E";
+}
+
+mjx-c.mjx-c5B::before {
+  padding: 0.75em 0.278em 0.25em 0;
+  content: "[";
+}
+
+mjx-c.mjx-c5D::before {
+  padding: 0.75em 0.278em 0.25em 0;
+  content: "]";
+}
+
+mjx-c.mjx-c1D6FC.TEX-I::before {
+  padding: 0.442em 0.64em 0.011em 0;
+  content: "\3B1";
+}
+
+mjx-c.mjx-c221A::before {
+  padding: 0.8em 0.853em 0.2em 0;
+  content: "\221A";
+}
+
+mjx-c.mjx-c1D45B.TEX-I::before {
+  padding: 0.442em 0.6em 0.011em 0;
+  content: "n";
+}
+</style></head>
+<body class="bg-slate-50 text-slate-800 h-screen flex flex-col overflow-hidden">
+<!-- Header -->
+<header class="bg-indigo-700 text-white shadow-lg z-20 shrink-0">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-3xl md:text-4xl">functions</span>
+<div>
+<h1 class="text-xl md:text-2xl font-bold tracking-wide">אינפי 1</h1>
+<p class="text-indigo-200 text-xs md:text-sm opacity-90 hidden md:block">המדריך השלם והממוקד</p>
+</div>
+</div>
+<div class="flex items-center gap-2 md:gap-3">
+<!-- Modes -->
+<div class="flex bg-indigo-800/50 p-1 rounded-xl gap-1 overflow-x-auto">
+<button class="flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap" id="btn-study" onclick="switchMode('study')">
+<span class="material-symbols-outlined text-lg">menu_book</span>
+<span class="hidden sm:inline">למידה</span>
+</button>
+<button class="flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap" id="btn-exam" onclick="switchMode('exam')">
+<span class="material-symbols-outlined text-lg">quiz</span>
+<span class="hidden sm:inline">בחינה עצמית</span>
+</button>
+<button class="flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap text-rose-200 hover:text-white hover:bg-rose-600/50" id="btn-sim" onclick="switchMode('sim')">
+<span class="material-symbols-outlined text-lg">timer</span>
+<span class="hidden sm:inline">סימולציה</span>
+</button>
+</div>
+<button class="hidden md:flex items-center justify-center w-8 h-8 text-indigo-100 hover:text-white" onclick="downloadPage()" title="הורד כקובץ">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-hidden relative bg-slate-50">
+<!-- VIEW 1: STUDY -->
+<div class="h-full flex flex-col transition-opacity duration-300" id="study-view">
+<div class="bg-white border-b border-slate-200 shadow-sm shrink-0 z-10 w-full overflow-x-auto no-scrollbar">
+<div class="flex gap-3 py-3 px-6 min-w-max" id="category-tabs"><button class="flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap bg-amber-100 text-amber-800 border-amber-200 ring-2 ring-amber-500 ring-offset-1"><span class="material-symbols-outlined text-lg">lightbulb</span>שיטות גבולות</button><button class="flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap  text-blue-800 border-blue-200  ring-blue-500    border-slate-200   border-slate-200   border-slate-200   border-slate-200 bg-white text-slate-600 border-slate-200"><span class="material-symbols-outlined text-lg">all_inclusive</span>גבולות מיוחדים</button><button class="flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap  text-indigo-800 border-indigo-200  ring-indigo-500    border-slate-200   border-slate-200   border-slate-200 bg-white text-slate-600 border-slate-200"><span class="material-symbols-outlined text-lg">rule</span>כללי גזירה</button><button class="flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap  text-orange-800 border-orange-200  ring-orange-500    border-slate-200   border-slate-200 bg-white text-slate-600 border-slate-200"><span class="material-symbols-outlined text-lg">flash_on</span>נגזרות מיידיות</button><button class="flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap  text-teal-800 border-teal-200  ring-teal-500    border-slate-200 bg-white text-slate-600 border-slate-200"><span class="material-symbols-outlined text-lg">construction</span>שיטות אינטגרציה</button><button class="flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap  text-emerald-800 border-emerald-200  ring-emerald-500  bg-white text-slate-600 border-slate-200"><span class="material-symbols-outlined text-lg">integration_instructions</span>כללי האינטגרלים</button><button class="flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap   border-slate-200 hover:bg-slate-50   border-slate-200   border-slate-200   border-slate-200   border-slate-200   border-slate-200 bg-white text-slate-600 border-slate-200"><span class="material-symbols-outlined text-lg">straighten</span>יישומים של אינטגרל מסויים</button><button class="flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap   border-slate-200 hover:bg-slate-50   border-slate-200   border-slate-200   border-slate-200   border-slate-200   border-slate-200 bg-white text-slate-600 border-slate-200"><span class="material-symbols-outlined text-lg">query_stats</span>חקירת פונקציות</button></div>
+</div>
+<div class="flex-1 overflow-y-auto p-4 md:p-6 pb-12" id="content-area"><div class="max-w-5xl mx-auto animate-fade-in pb-10"><div class="flex items-center gap-4 mb-6"><div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-3xl">lightbulb</span></div><div><h2 class="text-2xl font-bold text-slate-800">שיטות גבולות</h2></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"><div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col group overflow-hidden hover:shadow-md transition">
+                <div class="h-24 bg-slate-50 border-b border-slate-100 flex items-center justify-center p-4 relative"><div class="absolute inset-0 bg-amber-50 opacity-0 group-hover:opacity-100 transition"></div><div class="relative z-10 w-full flex justify-center"><div class="text-xl font-bold text-slate-800 font-math dir-ltr w-full text-center overflow-x-auto no-scrollbar px-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="137" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>0</mn><mn>0</mn></mfrac></math></mjx-assistive-mml></mjx-container></div></div></div>
+                <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0"><div class="text-lg font-bold text-amber-600 text-center w-full px-2 dir-rtl leading-relaxed">פירוק לגורמים / כפל בצמוד / לופיטל</div><div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">1. פירוק לגורמים: צמצום הגורם המאפס.<br>2. כפל בצמוד: לשורשים.<br>3. לופיטל: אם גזיר, גבול מנת הנגזרות.<br><b>דוגמה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="138" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munder limits="false"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munder><mjx-mfrac space="2"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" style="font-size: 73.7%;"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow data-mjx-texclass="ORD"><mi>x</mi><mo accent="false" stretchy="false">→</mo><mn>1</mn></mrow></munder><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac></math></mjx-assistive-mml></mjx-container><br><b>פתרון:</b> פירוק לגורמים: <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="139" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munder limits="false"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munder><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow data-mjx-texclass="ORD"><mi>x</mi><mo accent="false" stretchy="false">→</mo><mn>1</mn></mrow></munder><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container>.<br><b>תשובה:</b> 2</div></div></div>
+            </div><div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col group overflow-hidden hover:shadow-md transition">
+                <div class="h-24 bg-slate-50 border-b border-slate-100 flex items-center justify-center p-4 relative"><div class="absolute inset-0 bg-amber-50 opacity-0 group-hover:opacity-100 transition"></div><div class="relative z-10 w-full flex justify-center"><div class="text-xl font-bold text-slate-800 font-math dir-ltr w-full text-center overflow-x-auto no-scrollbar px-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="140" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-n" size="s"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mi class="mjx-n" size="s"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi mathvariant="normal">∞</mi><mi mathvariant="normal">∞</mi></mfrac></math></mjx-assistive-mml></mjx-container></div></div></div>
+                <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0"><div class="text-lg font-bold text-amber-600 text-center w-full px-2 dir-rtl leading-relaxed">הוצאת חזקה מובילה / לופיטל</div><div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">בפולינומים מוציאים את החזקה הגבוהה ביותר. אחרת, לופיטל.<br><b>דוגמה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="141" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munder limits="false"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-munder><mjx-mfrac space="2"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow data-mjx-texclass="ORD"><mi>x</mi><mo accent="false" stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mfrac><mrow><mn>3</mn><mi>x</mi></mrow><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></mfrac></math></mjx-assistive-mml></mjx-container><br><b>פתרון:</b> הוצאת גורם משותף: <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="142" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-mfrac space="2"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mfrac><mn>3</mn><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mrow data-mjx-texclass="ORD"><mo>/</mo></mrow><mi>x</mi></mrow></mfrac></math></mjx-assistive-mml></mjx-container>.<br><b>תשובה:</b> 3</div></div></div>
+            </div><div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col group overflow-hidden hover:shadow-md transition">
+                <div class="h-24 bg-slate-50 border-b border-slate-100 flex items-center justify-center p-4 relative"><div class="absolute inset-0 bg-amber-50 opacity-0 group-hover:opacity-100 transition"></div><div class="relative z-10 w-full flex justify-center"><div class="text-xl font-bold text-slate-800 font-math dir-ltr w-full text-center overflow-x-auto no-scrollbar px-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="143" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="3"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">∞</mi><mo>−</mo><mi mathvariant="normal">∞</mi></math></mjx-assistive-mml></mjx-container></div></div></div>
+                <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0"><div class="text-lg font-bold text-amber-600 text-center w-full px-2 dir-rtl leading-relaxed">מכנה משותף / כפל בצמוד</div><div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">יש להפוך את הביטוי לשבר כדי לקבל צורה של מנה.<br><b>דוגמה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="144" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munder limits="false"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-munder><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msqrt><mjx-sqrt><mjx-surd><mjx-mo class="mjx-n"><mjx-c class="mjx-c221A"></mjx-c></mjx-mo></mjx-surd><mjx-box style="padding-top: 0.087em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.289em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-box></mjx-sqrt></mjx-msqrt><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow data-mjx-texclass="ORD"><mi>x</mi><mo accent="false" stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo stretchy="false">(</mo><msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi></msqrt><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><br><b>פתרון:</b> כפל בצמוד: <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="145" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-msqrt><mjx-sqrt><mjx-surd><mjx-mo class="mjx-n"><mjx-c class="mjx-c221A"></mjx-c></mjx-mo></mjx-surd><mjx-box style="padding-top: 0.077em;"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.289em;"><mjx-mn class="mjx-n" style="font-size: 73.7%;"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-box></mjx-sqrt></mjx-msqrt><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mi>x</mi><mrow><msqrt><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>x</mi></msqrt><mo>+</mo><mi>x</mi></mrow></mfrac><mo accent="false" stretchy="false">→</mo><mn>1</mn><mrow data-mjx-texclass="ORD"><mo>/</mo></mrow><mn>2</mn></math></mjx-assistive-mml></mjx-container>.<br><b>תשובה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="146" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mrow data-mjx-texclass="ORD"><mo>/</mo></mrow><mn>2</mn></math></mjx-assistive-mml></mjx-container></div></div></div>
+            </div><div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col group overflow-hidden hover:shadow-md transition">
+                <div class="h-24 bg-slate-50 border-b border-slate-100 flex items-center justify-center p-4 relative"><div class="absolute inset-0 bg-amber-50 opacity-0 group-hover:opacity-100 transition"></div><div class="relative z-10 w-full flex justify-center"><div class="text-xl font-bold text-slate-800 font-math dir-ltr w-full text-center overflow-x-auto no-scrollbar px-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="147" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c22C5"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="3"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>0</mn><mo>⋅</mo><mi mathvariant="normal">∞</mi></math></mjx-assistive-mml></mjx-container></div></div></div>
+                <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0"><div class="text-lg md:text-xl text-amber-600 font-bold mb-3 font-math dir-ltr text-center w-full overflow-x-auto px-2 pb-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="148" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-mfrac space="2"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mfrac><mi>f</mi><mrow><mn>1</mn><mrow data-mjx-texclass="ORD"><mo>/</mo></mrow><mi>g</mi></mrow></mfrac></math></mjx-assistive-mml></mjx-container></div><div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">עדיף להשאיר את הלוגריתם במונה ולהוריד חזקות.<br><b>דוגמה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="149" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munder limits="false"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.155em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.289em;"><mjx-mo class="mjx-n" style="font-size: 73.7%;"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo></mjx-script></mjx-msup></mjx-texatom></mjx-script></mjx-munder><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6E"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow data-mjx-texclass="ORD"><mi>x</mi><mo accent="false" stretchy="false">→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></munder><mi>x</mi><mi>ln</mi><mo data-mjx-texclass="NONE">⁡</mo><mi>x</mi></math></mjx-assistive-mml></mjx-container><br><b>פתרון:</b> מעבר לצורה <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="150" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6E"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mrow><mi>ln</mi><mo data-mjx-texclass="NONE">⁡</mo><mi>x</mi></mrow><mrow><mn>1</mn><mrow data-mjx-texclass="ORD"><mo>/</mo></mrow><mi>x</mi></mrow></mfrac></math></mjx-assistive-mml></mjx-container>, לופיטל.<br><b>תשובה:</b> 0</div></div></div>
+            </div><div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col group overflow-hidden hover:shadow-md transition">
+                <div class="h-24 bg-slate-50 border-b border-slate-100 flex items-center justify-center p-4 relative"><div class="absolute inset-0 bg-amber-50 opacity-0 group-hover:opacity-100 transition"></div><div class="relative z-10 w-full flex justify-center"><div class="text-xl font-bold text-slate-800 font-math dir-ltr w-full text-center overflow-x-auto no-scrollbar px-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="151" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-n" size="s"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>1</mn><mi mathvariant="normal">∞</mi></msup></math></mjx-assistive-mml></mjx-container></div></div></div>
+                <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0"><div class="text-lg md:text-xl text-amber-600 font-bold mb-3 font-math dir-ltr text-center w-full overflow-x-auto px-2 pb-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="152" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>e</mi><mrow data-mjx-texclass="ORD"><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></msup></math></mjx-assistive-mml></mjx-container></div><div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">זהות אוילר המקוצרת לגבולות מהצורה הזו.<br><b>דוגמה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="153" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munder limits="false"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-munder><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mfrac space="3"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow data-mjx-texclass="ORD"><mi>x</mi><mo accent="false" stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>2</mn><mi>x</mi></mfrac><msup><mo stretchy="false">)</mo><mi>x</mi></msup></math></mjx-assistive-mml></mjx-container><br><b>פתרון:</b> לפי הכלל: <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="154" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mn class="mjx-n" style="font-size: 73.7%;"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mi class="mjx-i" style="font-size: 73.7%;"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>e</mi><mrow data-mjx-texclass="ORD"><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mi>x</mi><mo stretchy="false">(</mo><mfrac><mn>2</mn><mi>x</mi></mfrac><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><msup><mi>e</mi><mn>2</mn></msup></math></mjx-assistive-mml></mjx-container>.<br><b>תשובה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="155" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>e</mi><mn>2</mn></msup></math></mjx-assistive-mml></mjx-container></div></div></div>
+            </div><div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col group overflow-hidden hover:shadow-md transition">
+                <div class="h-24 bg-slate-50 border-b border-slate-100 flex items-center justify-center p-4 relative"><div class="absolute inset-0 bg-amber-50 opacity-0 group-hover:opacity-100 transition"></div><div class="relative z-10 w-full flex justify-center"><div class="text-xl font-bold text-slate-800 font-math dir-ltr w-full text-center overflow-x-auto no-scrollbar px-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="156" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-msup space="2"><mjx-mi class="mjx-n"><mjx-c class="mjx-c221E"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>0</mn><mn>0</mn></msup><mo>,</mo><msup><mi mathvariant="normal">∞</mi><mn>0</mn></msup></math></mjx-assistive-mml></mjx-container></div></div></div>
+                <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0"><div class="text-lg md:text-xl text-amber-600 font-bold mb-3 font-math dir-ltr text-center w-full overflow-x-auto px-2 pb-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="157" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6E"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>e</mi><mrow data-mjx-texclass="ORD"><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mi>g</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>ln</mi><mo data-mjx-texclass="NONE">⁡</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></msup></math></mjx-assistive-mml></mjx-container></div><div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">הופך את החזקה למכפלה.<br><b>דוגמה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="158" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munder limits="false"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.155em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-msup><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.289em;"><mjx-mo class="mjx-n" style="font-size: 73.7%;"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo></mjx-script></mjx-msup></mjx-texatom></mjx-script></mjx-munder><mjx-msup space="2"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow data-mjx-texclass="ORD"><mi>x</mi><mo accent="false" stretchy="false">→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></munder><msup><mi>x</mi><mi>x</mi></msup></math></mjx-assistive-mml></mjx-container><br><b>פתרון:</b> מעבר ל- <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="159" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6E"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>e</mi><mrow data-mjx-texclass="ORD"><mi>x</mi><mi>ln</mi><mo data-mjx-texclass="NONE">⁡</mo><mi>x</mi></mrow></msup></math></mjx-assistive-mml></mjx-container>, הגבול במעריך הוא 0.<br><b>תשובה:</b> 1</div></div></div>
+            </div><div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col group overflow-hidden hover:shadow-md transition">
+                <div class="h-24 bg-slate-50 border-b border-slate-100 flex items-center justify-center p-4 relative"><div class="absolute inset-0 bg-amber-50 opacity-0 group-hover:opacity-100 transition"></div><div class="relative z-10 w-full flex justify-center"><div class="text-xl font-bold text-slate-800 w-full text-center px-2 q-text">משפט הסנדוויץ'</div></div></div>
+                <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0"><div class="text-lg md:text-xl text-amber-600 font-bold mb-3 font-math dir-ltr text-center w-full overflow-x-auto px-2 pb-2"><mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="160" style="font-size: 109.7%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c21D2"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>≤</mo><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>L</mi><mo stretchy="false">⇒</mo><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>L</mi></math></mjx-assistive-mml></mjx-container></div><div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">אם הפונקציה חסומה בין שתי פונקציות ששואפות לאותו גבול L, אז גם היא שואפת ל-L.<br><b>דוגמה:</b> <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="161" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munder limits="false"><mjx-mo class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6D"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.15em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munder><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6E"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow data-mjx-texclass="ORD"><mi>x</mi><mo accent="false" stretchy="false">→</mo><mn>0</mn></mrow></munder><mi>x</mi><mi>sin</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mn>1</mn><mrow data-mjx-texclass="ORD"><mo>/</mo></mrow><mi>x</mi><mo stretchy="false">)</mo></math></mjx-assistive-mml></mjx-container><br><b>פתרון:</b> חסימה: <mjx-container class="MathJax CtxtMenu_Attached_0" jax="CHTML" tabindex="0" ctxtmenu_counter="162" style="font-size: 109.6%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo></mjx-texatom><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n" space="2"><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6E"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-texatom space="4" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7C"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>−</mo><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>x</mi><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>x</mi><mi>sin</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><mn>1</mn><mrow data-mjx-texclass="ORD"><mo>/</mo></mrow><mi>x</mi><mo stretchy="false">)</mo><mo>≤</mo><mrow data-mjx-texclass="ORD"><mo stretchy="false">|</mo></mrow><mi>x</mi><mo stretchy="false">|</mo></math></mjx-assistive-mml></mjx-container>.<br><b>תשובה:</b> 0</div></div></div>
+            </div></div></div></div>
+</div>
+<!-- VIEW 2: FLASHCARD EXAM -->
+<div class="hidden h-full flex flex-col items-center justify-center p-4 bg-slate-100 transition-opacity duration-300 relative" id="exam-view">
+<div class="w-full max-w-xl flex flex-col h-full max-h-[650px]">
+<div class="flex justify-between items-end mb-4 px-2">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-indigo-500">שאלה נוכחית</span>
+<div class="text-2xl font-black text-slate-700">
+<span id="current-q-num">1</span> <span class="text-lg text-slate-400 font-medium">/ <span id="total-q-num">10</span></span>
+</div>
+</div>
+<button class="text-indigo-600 hover:text-indigo-800 text-sm font-bold flex items-center gap-1 bg-white px-3 py-1 rounded-full shadow-sm border border-indigo-100 transition hover:shadow-md" onclick="restartExam()">
+<span class="material-symbols-outlined text-sm">refresh</span>
+                    התחל מחדש
+                </button>
+</div>
+<div class="card-flip w-full flex-1 mb-6 cursor-pointer group relative" onclick="flipCard()">
+<div class="card-inner bg-white shadow-xl rounded-2xl border border-slate-200" id="flashcard-inner">
+<div class="card-front bg-white p-6">
+<div class="absolute top-4 right-4 bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" id="card-icon">help</span>
+<span id="card-category">קטגוריה</span>
+</div>
+<div class="flex-1 flex flex-col items-center justify-center w-full overflow-hidden">
+<div class="text-3xl md:text-4xl font-bold text-slate-800 text-center leading-relaxed font-math w-full overflow-x-auto px-2 py-4" id="card-question"></div>
+</div>
+<div class="mt-auto pt-4 text-xs text-slate-400 font-semibold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-base animate-bounce">touch_app</span> לחץ כדי להפוך
+                        </div>
+</div>
+<div class="card-back bg-indigo-50 border-[3px] border-indigo-100 p-6 overflow-hidden">
+<div class="absolute top-4 right-4 bg-white text-indigo-600 px-3 py-1 rounded-full text-xs font-bold shadow-sm">תשובה</div>
+<div class="flex-1 flex flex-col items-center justify-center w-full overflow-y-auto no-scrollbar">
+<div class="text-xl md:text-2xl font-bold text-indigo-900 text-center mb-6 leading-relaxed font-math w-full overflow-x-auto px-2" id="card-answer"></div>
+<div class="w-16 h-1 bg-indigo-200 rounded-full mb-6 shrink-0"></div>
+<div class="text-base md:text-lg text-slate-600 px-4 leading-relaxed shrink-0 w-full" id="card-note"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 h-16 shrink-0">
+<button class="flex-1 rounded-xl font-bold text-rose-600 bg-white border-2 border-rose-100 hover:bg-rose-50 hover:border-rose-200 transition active:scale-95 flex justify-center items-center gap-2" onclick="nextCard(false)">
+<span class="material-symbols-outlined">close</span> לא ידעתי
+                </button>
+<button class="flex-1 rounded-xl font-bold text-emerald-700 bg-emerald-100 border-2 border-emerald-200 hover:bg-emerald-200 transition active:scale-95 flex justify-center items-center gap-2" onclick="nextCard(true)">
+<span class="material-symbols-outlined">check</span> ידעתי!
+                </button>
+</div>
+</div>
+</div>
+<!-- VIEW 3: SIMULATION -->
+<div class="hidden h-full flex flex-col bg-slate-100 transition-opacity duration-300 relative overflow-hidden" id="sim-view">
+<!-- Selection Screen -->
+<div class="h-full flex flex-col items-center justify-center p-4 overflow-y-auto" id="sim-selector">
+<div class="max-w-2xl w-full text-center mb-10 pt-8">
+<span class="material-symbols-outlined text-7xl text-indigo-600 mb-4">school</span>
+<h2 class="text-3xl font-bold text-slate-900 mb-2">סימולציית מבחנים</h2>
+<p class="text-slate-600">בחר מבחן לתרגול. הטיימר יופעל אוטומטית ל-3 שעות.</p>
+<p class="text-rose-600 font-bold mt-2">הנחיות: שאלה 1 חובה. יש לענות על 4 שאלות נוספות מתוך שאלות 2-6.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl px-4 pb-10" id="exams-grid">
+<!-- Injected by JS -->
+</div>
+</div>
+<!-- Active Exam -->
+<div class="hidden flex-col h-full" id="sim-active">
+<div class="bg-slate-800 text-white shadow-md px-4 py-3 flex justify-between items-center sticky-timer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-rose-400 animate-pulse">timer</span>
+<span class="text-2xl font-mono font-bold tracking-widest" id="timer-display">03:00:00</span>
+</div>
+<div class="text-sm text-slate-300 hidden sm:block" id="exam-title-display">מבחן</div>
+<div class="flex gap-2">
+<button class="bg-slate-600 hover:bg-slate-700 text-white px-3 py-1.5 rounded-lg text-sm transition" onclick="exitSimulation()">יציאה</button>
+<button class="bg-rose-600 hover:bg-rose-700 text-white px-4 py-1.5 rounded-lg text-sm font-bold shadow transition" onclick="finishSimulation()">הגש מבחן</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-4 md:p-8" id="sim-paper">
+<div class="max-w-4xl mx-auto bg-white shadow-xl min-h-screen p-8 md:p-12 rounded-sm relative">
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.03]"><span class="text-9xl font-bold rotate-45">מבחן</span></div>
+<div class="text-center border-b-2 border-slate-800 pb-6 mb-8">
+<h2 class="text-3xl font-bold text-slate-900 mb-2">מבחן בחשבון אינפיניטסימלי 1</h2>
+<p class="text-xl text-slate-600" id="exam-subtitle">שם המבחן</p>
+<div class="text-sm text-slate-500 mt-4 bg-slate-100 p-3 rounded-lg inline-block border border-slate-200">
+<strong>הוראות לנבחן:</strong><br> משך המבחן: 3 שעות.<br> שאלה 1 היא <strong>חובה</strong>.<br> יש לענות על <strong>4</strong> שאלות נוספות מתוך שאלות 2-6.
+                        </div>
+</div>
+<div class="space-y-12" id="sim-questions"></div>
+<div class="mt-16 pt-8 border-t border-slate-200 text-center text-slate-400 text-sm">סוף המבחן - בהצלחה!</div>
+</div>
+<div class="h-10"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-3 text-center text-xs md:text-sm border-t border-slate-800 shrink-0 z-30">
+<div class="container mx-auto px-4 flex justify-center items-center gap-1">
+<span>© כל הזכויות שמורות ל</span>
+<span class="font-bold text-indigo-300">אריאל טל</span>
+<span class="mx-1">|</span>
+<span>2026</span>
+</div>
+</footer>
+<script>
+    /* --- DATA REPOSITORY --- */
+    const infiniData = {
+        limit_strategies: {
+            title: "שיטות גבולות", icon: "lightbulb", color: "amber", isText: false,
+            items: [
+                { q: "\\frac{0}{0}", a: "פירוק לגורמים / כפל בצמוד / לופיטל", note: "1. פירוק לגורמים: צמצום הגורם המאפס.<br>2. כפל בצמוד: לשורשים.<br>3. לופיטל: אם גזיר, גבול מנת הנגזרות.<br><b>דוגמה:</b> $\\lim_{x\\to 1} \\frac{x^2-1}{x-1}$<br><b>פתרון:</b> פירוק לגורמים: $\\lim_{x\\to 1} (x+1)$.<br><b>תשובה:</b> 2", type: "text" },
+                { q: "\\frac{\\infty}{\\infty}", a: "הוצאת חזקה מובילה / לופיטל", note: "בפולינומים מוציאים את החזקה הגבוהה ביותר. אחרת, לופיטל.<br><b>דוגמה:</b> $\\lim_{x\\to\\infty}\\frac{3x}{x+1}$<br><b>פתרון:</b> הוצאת גורם משותף: $\\lim \\frac{3}{1+\\frac{1}{x}}$.<br><b>תשובה:</b> 3", type: "text" },
+                { q: "\\infty - \\infty", a: "מכנה משותף / כפל בצמוד", note: "יש להפוך את הביטוי לשבר כדי לקבל צורה של מנה.<br><b>דוגמה:</b> $\\lim_{x\\to\\infty}(\\sqrt{x^2+x}-x)$<br><b>פתרון:</b> כפל בצמוד: $\\frac{x}{\\sqrt{x^2+x}+x} \\to \\frac{1}{2}$.<br><b>תשובה:</b> $\\frac{1}{2}$", type: "text" },
+                { q: "0 \\cdot \\infty", a: "\\lim \\frac{f}{\\frac{1}{g}}", note: "עדיף להשאיר את הלוגריתם במונה ולהוריד חזקות.<br><b>דוגמה:</b> $\\lim_{x\\to 0^+} x\\ln x$<br><b>פתרון:</b> מעבר לצורה $\\frac{\\ln x}{\\frac{1}{x}}$, לופיטל.<br><b>תשובה:</b> 0", type: "math" },
+                { q: "1^\\infty", a: "e^{\\lim g(x)(f(x)-1)}", note: "זהות אוילר המקוצרת לגבולות מהצורה הזו.<br><b>דוגמה:</b> $\\lim_{x\\to\\infty}(1+\\frac{2}{x})^x$<br><b>פתרון:</b> לפי הכלל: $e^{\\lim x(\\frac{2}{x})} = e^2$.<br><b>תשובה:</b> $e^2$", type: "math" },
+                { q: "0^0, \\infty^0", a: "e^{\\lim g(x)\\ln f(x)}", note: "הופך את החזקה למכפלה.<br><b>דוגמה:</b> $\\lim_{x\\to 0^+} x^x$<br><b>פתרון:</b> מעבר ל- $e^{x\\ln x}$, הגבול במעריך הוא 0.<br><b>תשובה:</b> 1", type: "math" },
+                { q: "משפט הסנדוויץ'", a: "L \\le \\lim f(x) \\le L \\Rightarrow \\lim f(x) = L", note: "אם הפונקציה חסומה בין שתי פונקציות ששואפות לאותו גבול L, אז גם היא שואפת ל-L.<br><b>דוגמה:</b> $\\lim_{x\\to 0} x\\sin\\left(\\frac{1}{x}\\right)$<br><b>פתרון:</b> חסימה: $-|x| \\le x\\sin\\left(\\frac{1}{x}\\right) \\le |x|$.<br><b>תשובה:</b> 0", type: "math" },
+                { q: "אפסה כפול חסומה", a: "$$\\lim f(x)\\cdot g(x)=0$$", note: "<span class='zero-bounded-tight'><b>דוגמה:</b><br>$$\\lim_{x\\to 0} x\\sin\\left(\\frac{1}{x}\\right)$$<br><b>פתרון:</b><br>הפונקציה $\\sin\\left(\\frac{1}{x}\\right)$ חסומה בין ‎−1 ל־1,<br>והפונקציה $x$ שואפת ל־0 כאשר $x \\to 0$.<br>לכן מכפלת הפונקציות שואפת ל־0, והגבול שווה ל־0.<br><b>תשובה:</b><br>$$\\lim_{x\\to 0} x\\sin\\left(\\frac{1}{x}\\right)=0$$</span>", type: "text" }
+            ]
+        },
+        limits: {
+            title: "גבולות מיוחדים", icon: "all_inclusive", color: "blue", isText: false,
+            items: [
+                { q: "\\lim_{x \\to 0} \\frac{\\sin x}{x}", a: "1", note: "רק כשהביטוי בסינוס שואף ל-0 וזהה למכנה.<br><b>דוגמה:</b> $\\lim_{x\\to 0}\\frac{\\sin 3x}{x}$<br><b>פתרון:</b> כפל וחילוק ב-3: $3 \\cdot \\frac{\\sin 3x}{3x}$.<br><b>תשובה:</b> 3", type: "math" },
+                { q: "\\lim_{x \\to 0} \\frac{1-\\cos x}{x^2}", a: "\\frac{1}{2}", note: "חשוב לטיילור ולגבולות טריגו.<br><b>דוגמה:</b> $\\lim_{x\\to 0}\\frac{1-\\cos 2x}{x^2}$<br><b>פתרון:</b> שימוש בזהות זווית כפולה: $\\frac{2\\sin^2 x}{x^2}$.<br><b>תשובה:</b> 2", type: "math" },
+                { q: "\\lim_{x \\to 0} \\frac{\\ln(1+x)}{x}", a: "1", note: "שקילות ל-x באפס.<br><b>דוגמה:</b> $\\lim_{x\\to 0}\\frac{\\ln(1+3x)}{x}$<br><b>פתרון:</b> התאמת המכנה: $3 \\cdot \\frac{\\ln(1+3x)}{3x}$.<br><b>תשובה:</b> 3", type: "math" },
+                { q: "\\lim_{x \\to 0} \\frac{e^x - 1}{x}", a: "1", note: "נגזרת e^x באפס.<br><b>דוגמה:</b> $\\lim_{x\\to 0}\\frac{e^{5x}-1}{x}$<br><b>פתרון:</b> התאמה: $5 \\cdot \\frac{e^{5x}-1}{5x}$.<br><b>תשובה:</b> 5", type: "math" },
+                { q: "\\lim_{x \\to \\infty} (1 + \\frac{1}{x})^x", a: "e", note: "הגדרת e.<br><b>דוגמה:</b> $\\lim (1+\\frac{1}{x})^{2x}$<br><b>פתרון:</b> חוקי חזקות: $[(1+\\frac{1}{x})^x]^2$.<br><b>תשובה:</b> $e^2$", type: "math" },
+                { q: "\\lim_{x \\to \\infty} \\frac{\\ln x}{x^\\alpha}", a: "0", note: "חזקה מנצחת לוגריתם.<br><b>דוגמה:</b> $\\lim_{x\\to\\infty}\\frac{\\ln x}{\\sqrt{x}}$<br><b>פתרון:</b> סדרי גודל: שורש חזק מלוג.<br><b>תשובה:</b> 0", type: "math" },
+                { q: "\\lim_{x \\to \\infty} \\frac{x^n}{e^x}", a: "0", note: "מעריך מנצח חזקה.<br><b>דוגמה:</b> $\\lim_{x\\to\\infty}\\frac{x^{100}}{e^x}$<br><b>פתרון:</b> אקספוננט גדל מהר יותר.<br><b>תשובה:</b> 0", type: "math" }
+            ]
+        },
+        trig_identities: {
+            title: "זהויות טריגונומטריות", icon: "functions", color: "violet", isText: false,
+            items: [
+                { q: "\\sin^2 x + \\cos^2 x = 1", a: "פיתגורס", note: "", type: "math" },
+                { q: "\\tan x = \\frac{\\sin x}{\\cos x}", a: "טנגנס", note: "שימוש נפוץ: מעבר בין sin/cos ל־tan/cot", type: "math" },
+                { q: "\\cot x = \\frac{\\cos x}{\\sin x}", a: "קוטנגנס", note: "שימוש נפוץ: מעבר בין sin/cos ל־tan/cot", type: "math" },
+                { q: "1+\\tan^2 x = \\frac{1}{\\cos^2 x}", a: "זהויות עם טנגנס", note: "", type: "math" },
+                { q: "1+\\cot^2 x = \\frac{1}{\\sin^2 x}", a: "זהויות עם קוטנגנס", note: "", type: "math" },
+                { q: "\\sin(2x)=2\\sin x\\cos x", a: "סינוס זווית כפולה", note: "", type: "math" },
+                { q: "\\cos(2x)=\\cos^2 x-\\sin^2 x", a: "קוסינוס זווית כפולה", note: "", type: "math" },
+                { q: "\\begin{aligned} \\cos(2x)&=1-2\\sin^2 x \\\\ \\cos(2x)&=2\\cos^2 x-1 \\end{aligned}", a: "קוסינוס זווית כפולה (צורות נוספות)", note: "", type: "math" },
+                { q: "\\tan(2x)=\\frac{2\\tan x}{1-\\tan^2 x}", a: "טנגנס זווית כפולה", note: "", type: "math" },
+                { q: "\\sin^2 x=\\frac{1-\\cos(2x)}{2}", a: "הורדת חזקה לסינוס בריבוע", note: "שימוש נפוץ: אינטגרלים והורדת חזקה", type: "math" },
+                { q: "\\cos^2 x=\\frac{1+\\cos(2x)}{2}", a: "הורדת חזקה לקוסינוס בריבוע", note: "שימוש נפוץ: אינטגרלים והורדת חזקה", type: "math" },
+                { q: "\\tan^2 x=\\frac{1-\\cos(2x)}{1+\\cos(2x)}", a: "חצי זווית לטנגנס בריבוע", note: "שימוש נפוץ: אינטגרלים והורדת חזקה", type: "math" },
+                { q: "\\sin a\\sin b=\\frac{1}{2}\\left[\\cos(a-b)-\\cos(a+b)\\right]", a: "מכפלת סינוסים", note: "שימוש נפוץ: אינטגרלים ופישוט מכפלות", type: "math" },
+                { q: "\\cos a\\cos b=\\frac{1}{2}\\left[\\cos(a-b)+\\cos(a+b)\\right]", a: "מכפלת קוסינוסים", note: "שימוש נפוץ: אינטגרלים ופישוט מכפלות", type: "math" },
+                { q: "\\sin a\\cos b=\\frac{1}{2}\\left[\\sin(a+b)+\\sin(a-b)\\right]", a: "סינוס כפול קוסינוס", note: "שימוש נפוץ: אינטגרלים ופישוט מכפלות", type: "math" },
+                { q: "\\sin a+\\sin b=2\\sin\\left(\\frac{a+b}{2}\\right)\\cos\\left(\\frac{a-b}{2}\\right)", a: "סינוס סכום", note: "שימוש נפוץ: פישוט סכומים/הפרשים", type: "math" },
+                { q: "\\sin a-\\sin b=2\\cos\\left(\\frac{a+b}{2}\\right)\\sin\\left(\\frac{a-b}{2}\\right)", a: "סינוס הפרש", note: "שימוש נפוץ: פישוט סכומים/הפרשים", type: "math" },
+                { q: "\\cos a+\\cos b=2\\cos\\left(\\frac{a+b}{2}\\right)\\cos\\left(\\frac{a-b}{2}\\right)", a: "קוסינוס סכום", note: "שימוש נפוץ: פישוט סכומים/הפרשים", type: "math" },
+                { q: "\\cos a-\\cos b=-2\\sin\\left(\\frac{a+b}{2}\\right)\\sin\\left(\\frac{a-b}{2}\\right)", a: "קוסינוס הפרש", note: "שימוש נפוץ: פישוט סכומים/הפרשים", type: "math" }
+            ]
+        },
+        derivative_rules: {
+            title: "כללי גזירה", icon: "rule", color: "indigo", isText: false,
+            items: [
+                { q: "(f \\cdot g)'", a: "f'g + fg'", note: "כלל המכפלה<br><b>דוגמה:</b> $(x\\sin x)'$<br><b>פתרון:</b> נגזרת ראשון כפול שני + ראשון כפול נגזרת שני.<br><b>תשובה:</b> $\\sin x + x\\cos x$", type: "math" },
+                { q: "(\\frac{f}{g})'", a: "\\frac{f'g - fg'}{g^2}", note: "כלל המנה<br><b>דוגמה:</b> $(\\frac{1}{x})'$<br><b>פתרון:</b> $\\frac{0\\cdot x - 1\\cdot 1}{x^2}$.<br><b>תשובה:</b> $-\\frac{1}{x^2}$", type: "math" },
+                { q: "(f(g(x)))'", a: "f'(g(x)) \\cdot g'(x)", note: "כלל השרשרת<br><b>דוגמה:</b> $(\\sin(x^2))'$<br><b>פתרון:</b> נגזרת חיצונית $\\cos(x^2)$ כפול פנימית $2x$.<br><b>תשובה:</b> $2x\\cos(x^2)$", type: "math" },
+                { q: "(f^g)'", a: "f^g(g'\\ln f + g \\frac{f'}{f})", note: "גזירה לוגריתמית<br><b>דוגמה:</b> $(x^x)'$<br><b>פתרון:</b> $y=x^x \\to \\ln y = x\\ln x$.<br>לוקחים ln לשני האגפים כדי להוריד את החזקה למכפלה.<br>גוזרים: $y'/y = 1+\\ln x$.<br><b>תשובה:</b> $x^x(1+\\ln x)$", type: "math" },
+                { 
+                    q: "<span class='dir-rtl'>גזירת אינטגרל $\\frac{d}{dx} \\int_{a}^{g(x)} f(t) dt$</span>", 
+                    a: "f(g(x)) \\cdot g'(x)", 
+                    note: "המשתנה בתוך האינטגרל הוא t, והביטוי כולו הוא פונקציה של x ולכן גוזרים לפי הכלל.<br><b>דוגמה:</b> $F(x)=\\int_0^{x^2} t\\cos(t^2)dt$<br><b>פתרון:</b> הצבת הגבול העליון בפונקציה וכפל בנגזרתו: $x^2\\cos(x^4) \\cdot 2x$.<br><b>תשובה:</b> $2x^3\\cos(x^4)$",
+                    type: "text" 
+                }
+            ]
+        },
+        immediate_derivatives: {
+            title: "נגזרות מיידיות", icon: "flash_on", color: "orange", isText: false,
+            items: [
+                { q: "(x^n)'", a: "nx^{n-1}", note: "כלל החזקה", type: "math" },
+                { q: "(\\sqrt{x})'", a: "\\frac{1}{2\\sqrt{x}}", note: "", type: "math" },
+                { q: "(\\frac{1}{x})'", a: "-\\frac{1}{x^2}", note: "", type: "math" },
+                { q: "(\\ln x)'", a: "\\frac{1}{x}", note: "", type: "math" },
+                { q: "(e^x)'", a: "e^x", note: "", type: "math" },
+                { q: "(a^x)'", a: "a^x \\ln a", note: "<b>דוגמה:</b> $(2^x)' = 2^x \\ln 2$.", type: "math" },
+                { q: "(\\log_a x)'", a: "\\frac{1}{x \\ln a}", note: "<b>דוגמה:</b> $(\\log_2 x)' = \\frac{1}{x \\ln 2}$.", type: "math" },
+                { q: "(\\sin x)'", a: "\\cos x", note: "", type: "math" },
+                { q: "(\\cos x)'", a: "-\\sin x", note: "", type: "math" },
+                { q: "(\\tan x)'", a: "\\frac{1}{\\cos^2 x}", note: "", type: "math" },
+                { q: "(\\cot x)'", a: "-\\frac{1}{\\sin^2 x}", note: "", type: "math" },
+                { q: "(\\arctan x)'", a: "\\frac{1}{1+x^2}", note: "", type: "math" },
+                { q: "(\\arcsin x)'", a: "\\frac{1}{\\sqrt{1-x^2}}", note: "", type: "math" },
+                { q: "(\\arccos x)'", a: "-\\frac{1}{\\sqrt{1-x^2}}", note: "", type: "math" },
+                { q: "(arccot x)'", a: "-\\frac{1}{1+x^2}", note: "", type: "math" }
+            ]
+        },
+        integral_strategies: {
+            title: "שיטות אינטגרציה", icon: "construction", color: "teal", isText: true,
+            items: [
+                { q: "\\int f(g(x))g'(x) dx", a: "שיטת ההצבה: $u=g(x)$", note: "<b>דוגמה:</b> $\\int 2x e^{x^2} dx$<br><b>פתרון:</b> נבחר $u=x^2$, נציב $du=2x\\,dx$ ונפשט.<br><b>תשובה:</b> $e^{x^2}$.", type: "text" },
+                { q: "\\int u v' dx", a: "אינטגרציה בחלקים", note: "<b>דוגמה:</b> $\\int x e^x dx$<br><b>פתרון:</b> נבחר $u=x$, $v'=e^x$, נקבל $v=e^x$ ונציב בנוסחה.<br><b>תשובה:</b> $e^x(x-1)$.", type: "text" },
+                { q: "\\int \\frac{P(x)}{Q(x)} dx", a: "שברים חלקיים", note: "<b>דוגמה:</b> $\\int \\frac{x}{(x+1)(x^2+1)} dx$<br><b>פתרון:</b> נפרק: $\\frac{x}{(x+1)(x^2+1)} = \\frac{A}{x+1} + \\frac{Bx + C}{x^2+1}$, נפתור ונקבל $A=-\\frac{1}{2}, B=\\frac{1}{2}, C=\\frac{1}{2}$.<br><b>תשובה:</b> $-\\frac{1}{2}\\ln|x+1| + \\frac{1}{4}\\ln(x^2+1) + \\frac{1}{2}\\arctan x + C$.", type: "text" },
+                { q: "\\int \\sin^n x \\cos^m x dx", a: "הצבה $u=\\sin x$ או הורדת מעלה", note: "<b>דוגמה:</b> $\\int \\sin^3 x\,dx$<br><b>פתרון:</b> נבחר $u=\\cos x$, נציב ונפשט לאינטגרל פולינומי.<br><b>תשובה:</b> $-\\cos x + \\frac{\\cos^3 x}{3}$.", type: "text" },
+                { q: "\\int \\sqrt{a^2-x^2} dx", a: "הצבה טריגונומטרית $x=a\\sin t$", note: "<b>דוגמה:</b> $\\int \\sqrt{1-x^2} dx$<br><b>פתרון:</b> נבחר $x=\\sin t$, נציב ונפשט ל-$\\int \\cos^2 t\\,dt$.<br><b>תשובה:</b> פותרים ומחזירים ל-$x$.", type: "text" }
+            ]
+        },
+        integrals: {
+            title: "כללי האינטגרלים", icon: "integration_instructions", color: "emerald", isText: false,
+            items: [
+                { q: "\\int x^n dx", a: "\\frac{x^{n+1}}{n+1}", note: "\\( n \\neq -1 \\)<br><b>דוגמה:</b> $\\int x^2 dx$<br><b>פתרון:</b> לפי הנוסחה עם $n=2$.<br><b>תשובה:</b> $\\frac{x^3}{3}$", type: "math" },
+                { q: "\\int \\frac{1}{x} dx", a: "\\ln|x|", note: "חובה ערך מוחלט<br><b>דוגמה:</b> $\\int \\frac{2}{x} dx$<br><b>פתרון:</b> הוצאת קבוע: $2\\int \\frac{1}{x} dx$.<br><b>תשובה:</b> $2\\ln|x|$", type: "math" },
+                { q: "\\int \\frac{1}{x^2-1} dx", a: "\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|+C", note: "<b>דוגמה:</b> $\\int \\frac{1}{x^2-1} dx$<br><b>פתרון:</b> לפי נוסחה.<br><b>תשובה:</b> $\\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right|+C$", type: "math" },
+                { q: "\\int \\frac{1}{\\sin x}\\,dx", a: "\\ln\\left|\\tan\\left(\\frac{x}{2}\\right)\\right|+C", note: "<b>דוגמה:</b> $\\int \\frac{1}{\\sin x} dx$<br><b>פתרון:</b> שימוש בזהות חצי זווית.<br><b>תשובה:</b> $\\ln\\left|\\tan\\left(\\frac{x}{2}\\right)\\right|+C$", type: "math" },
+                { q: "\\int \\frac{1}{\\cos x}\\,dx", a: "\\ln\\left|\\sec x+\\tan x\\right|+C", note: "<b>דוגמה:</b> $\\int \\frac{1}{\\cos x} dx$<br><b>פתרון:</b> הצבה עם $\\sec x+\\tan x$.<br><b>תשובה:</b> $\\ln\\left|\\sec x+\\tan x\\right|+C$", type: "math" },
+                { q: "\\int e^{ax} dx", a: "\\frac{1}{a}e^{ax}", note: "<b>דוגמה:</b> $\\int e^{3x} dx$<br><b>פתרון:</b> חלוקה במקדם הליניארי 3.<br><b>תשובה:</b> $\\frac{e^{3x}}{3}$", type: "math" },
+                { q: "\\int \\frac{1}{x^2+a^2} dx", a: "\\frac{1}{a}\\arctan(\\frac{x}{a})", note: "<b>דוגמה:</b> $\\int \\frac{1}{x^2+4} dx$<br><b>פתרון:</b> $a=2$. לפי הנוסחה.<br><b>תשובה:</b> $\\frac{1}{2}\\arctan\\left(\\frac{x}{2}\\right)$", type: "math" },
+                { q: "\\int \\frac{1}{\\sqrt{a^2-x^2}} dx", a: "\\arcsin(\\frac{x}{a})", note: "<b>דוגמה:</b> $\\int \\frac{1}{\\sqrt{9-x^2}} dx$<br><b>פתרון:</b> $a=3$. לפי הנוסחה.<br><b>תשובה:</b> $\\arcsin\\left(\\frac{x}{3}\\right)$", type: "math" },
+                { q: "\\int \\frac{f'}{f} dx", a: "\\ln|f|", note: "<b>דוגמה:</b> $\\int \\tan x dx$<br><b>פתרון:</b> $\\int \\frac{\\sin x}{\\cos x}$. המונה הוא מינוס נגזרת המכנה.<br><b>תשובה:</b> $-\\ln|\\cos x|$", type: "math" },
+                { q: "\\int \\ln x dx", a: "x\\ln x - x", note: "<b>דוגמה:</b> $\\int \\ln x\\,dx$<br><b>פתרון:</b> אינטגרציה בחלקים: $u=\\ln x,\\ dv=dx$.<br><b>תשובה:</b> $x\\ln x - x + C$", type: "math" },
+                { q: "\\int a^x dx", a: "\\frac{a^x}{\\ln a}+C", note: "<b>דוגמה:</b> $\\int 2^x dx$<br><b>פתרון:</b> לפי נוסחה עם $a=2$.<br><b>תשובה:</b> $\\frac{2^x}{\\ln 2}+C$", type: "math" },
+                { q: "\\int \\sin x\\,dx", a: "-\\cos x + C", note: "<b>דוגמה:</b> $\\int \\sin x\\,dx$<br><b>פתרון:</b> לפי נוסחה.<br><b>תשובה:</b> $-\\cos x + C$", type: "math" },
+                { q: "\\int \\cos x\\,dx", a: "\\sin x + C", note: "<b>דוגמה:</b> $\\int \\cos x\\,dx$<br><b>פתרון:</b> לפי נוסחה.<br><b>תשובה:</b> $\\sin x + C$", type: "math" },
+                { q: "\\int \\frac{dx}{\\cos^2 x}", a: "\\tan x + C", note: "<b>דוגמה:</b> $\\int \\frac{dx}{\\cos^2 x}$<br><b>פתרון:</b> לפי נוסחה.<br><b>תשובה:</b> $\\tan x + C$", type: "math" },
+                { q: "\\int \\frac{dx}{\\sin^2 x}", a: "-\\cot x + C", note: "<b>דוגמה:</b> $\\int \\frac{dx}{\\sin^2 x}$<br><b>פתרון:</b> לפי נוסחה.<br><b>תשובה:</b> $-\\cot x + C$", type: "math" },
+                { q: "\\int \\tan x\\,dx", a: "-\\ln|\\cos x| + C", note: "<b>דוגמה:</b> $\\int \\tan x\\,dx$<br><b>פתרון:</b> לפי נוסחה.<br><b>תשובה:</b> $-\\ln|\\cos x| + C$", type: "math" },
+                { q: "\\int \\cot x\\,dx", a: "\\ln|\\sin x| + C", note: "<b>דוגמה:</b> $\\int \\cot x\\,dx$<br><b>פתרון:</b> לפי נוסחה.<br><b>תשובה:</b> $\\ln|\\sin x| + C$", type: "math" },
+                { q: "\\int \\frac{dx}{a^2-x^2}", a: "\\frac{1}{2a}\\ln\\left|\\frac{a+x}{a-x}\\right|+C", note: "<b>דוגמה:</b> $\\int \\frac{dx}{4-x^2}$<br><b>פתרון:</b> לפי נוסחה עם $a=2$.<br><b>תשובה:</b> $\\frac{1}{4}\\ln\\left|\\frac{2+x}{2-x}\\right|+C$", type: "math" },
+                { q: "\\int \\frac{dx}{\\sqrt{x^2+a}}", a: "\\ln\\left|x+\\sqrt{x^2+a}\\right|+C", note: "<b>דוגמה:</b> $\\int \\frac{dx}{\\sqrt{x^2+4}}$<br><b>פתרון:</b> לפי נוסחה עם $a=4$.<br><b>תשובה:</b> $\\ln\\left|x+\\sqrt{x^2+4}\\right|+C$", type: "math" }
+            ]
+        },
+        integral_applications: {
+            title: "יישומים של אינטגרל מסויים", icon: "straighten", color: "pink", isText: true,
+            items: [
+                { q: "\\int_a^b (f(x)-g(x)) dx", a: "שטח בין גרפים", note: "תחילה מציירים סקיצה וקובעים איזו פונקציה מעל ואיזו מתחת.<br><b>דוגמה:</b> שטח בין $y=x$ ל $y=x^2$ ב $[0,1]$.<br><b>פתרון:</b> נבחר עליונה ותחתונה, נציב ונפשט: $\\int_0^1 (x-x^2) dx = [\\frac{x^2}{2} - \\frac{x^3}{3}]_0^1$.<br><b>תשובה:</b> $\\frac{1}{6}$", type: "text" },
+                { q: "\\pi \\int_a^b ([f(x)]^2 - [g(x)]^2) dx", a: "נפח גוף סיבוב (דיסקיות) סביב ציר X", note: "תחילה מציירים סקיצה וקובעים רדיוסים.<br><b>דוגמה:</b> $y=x$ סביב x ב $[0,1]$.<br><b>פתרון:</b> נציב את הרדיוסים ונחשב: $\\pi \\int_0^1 x^2 dx = \\pi \\left[\\frac{x^3}{3}\\right]$.<br><b>תשובה:</b> $\\frac{\\pi}{3}$", type: "text" },
+                { q: "2\\pi \\int_a^b x f(x) dx", a: "נפח גוף סיבוב (קליפות) סביב ציר Y", note: "תחילה מציירים סקיצה.<br><b>דוגמה:</b> $y=x$ סביב y ב $[0,1]$.<br><b>פתרון:</b> נציב בנוסחת הקליפות ונחשב: $2\\pi \\int_0^1 x^2 dx$.<br><b>תשובה:</b> $\\frac{2\\pi}{3}$", type: "text" },
+                { q: "\\int_a^b A(x) dx", a: "נפח לפי שטח חתך ידוע", note: "סכימת שטחי החתך לאורך הציר.", type: "text" },
+                { q: "\\int_a^b \\sqrt{1+(f')^2} dx", a: "אורך קשת", note: "תחילה גוזרים ומעלים בריבוע.<br><b>דוגמה:</b> $y=x$ ב $[0,1]$. $y'=1$.<br><b>פתרון:</b> נציב בנוסחה ונחשב: $\\int_0^1 \\sqrt{2} dx$.<br><b>תשובה:</b> $\\sqrt{2}$", type: "text" }
+            ]
+        },
+        function_analysis: {
+            title: "חקירת פונקציות", icon: "query_stats", color: "cyan",
+            items: [
+                { 
+                    q: "שלב 1: תחום הגדרה וסיווג נקודות", 
+                    a: "אילוצים + סיווג נקודות אי־הגדרה", 
+                    note: "<div class='space-y-3'><div><strong>אילוצים נפוצים:</strong><ul class='list-disc list-inside'><li>מכנה: $f(x) \\neq 0$</li><li>שורש: $f(x) \\ge 0$</li><li>לוגריתם: $f(x) > 0$</li><li>טנגנס: $x \\neq \\frac{\\pi}{2} + \\pi k$</li></ul></div><div class='border-t border-cyan-200 pt-2'><strong>בדיקת נקודות אי־הגדרה ($x=a$):</strong><div class='mb-1'>מחשבים גבול מימין ומשמאל $\\lim_{x \\to a^{\\pm}} f(x)$:</div><ul class='list-disc list-inside'><li>אם $\\lim_{x\\to a} f(x)=\\pm\\infty$ &rarr; <strong>אסימפטוטה אנכית</strong>.</li><li>אם $\\lim_{x\\to a} f(x)=L$ סופי, אך $f(a)$ לא מוגדרת או $f(a)\\ne L$ &rarr; <strong>חור (נקודת סליקה)</strong>.</li><li>אם $\\lim_{x\\to a^-} f(x)$ ו־$\\lim_{x\\to a^+} f(x)$ קיימים וסופיים אך שונים &rarr; <strong>אי־רציפות מסוג ראשון</strong>.</li><li>אחרת (לפחות אחד מהגבולות לא קיים או אינסופי) &rarr; <strong>אי־רציפות מסוג שני</strong>.</li></ul></div><div class='bg-cyan-50 p-2 rounded text-sm border border-cyan-100'><strong>כלל אצבע (רציונליות):</strong><br>גורם מצטמצם $\\to$ לרוב חור.<br>לא מצטמצם $\\to$ לרוב אסימפטוטה.</div></div>", 
+                    type: "text" 
+                },
+                { q: "שלב 2: חיתוך עם הצירים", a: "חיתוך ציר x: $y=0$ <br> חיתוך ציר y: $x=0$", note: "חיתוך עם ציר y: מציבים $x=0$ (אם מותר בתחום ההגדרה).<br>חיתוך עם ציר x: פותרים $f(x)=0$.", type: "text" },
+                { q: "שלב 3: אסימפטוטות", a: "אנכית, אופקית, משופעת", note: "<div class='space-y-2'><div><b>אנכית:</b> גבול בנקודה $x \\to a$ שווה $\\pm \\infty$.</div><div><b>אופקית:</b> גבול באינסוף $x \\to \\pm \\infty$ שווה למספר $L$.</div><div><b>משופעת:</b> $y=mx+n$ כאשר $m=\\lim \\frac{f(x)}{x}$ ו- $n=\\lim(f(x)-mx)$.</div><div class='bg-cyan-50 p-2 rounded text-sm border border-cyan-100'><strong>חשוב:</strong><br>m ו־n חייבים להיות מספרים סופיים.<br>אם $m=0$ מתקבלת אסימפטוטה אופקית.<br>אם m או n אינם סופיים – אין אסימפטוטה משופעת.</div></div>", type: "text" },
+                { q: "שלב 4: קיצון ועליה/ירידה", a: "נגזרת ראשונה: $f'(x)=0$", note: "<div class='space-y-2'><div>מוצאים נקודות חשודות. בודקים סימן הנגזרת:</div><ul class='list-disc list-inside text-sm'><li><strong>מקסימום:</strong> מ־(+) ל־(-).</li><li><strong>מינימום:</strong> מ־(-) ל־(+).</li></ul><div class='bg-cyan-50 p-2 rounded text-sm border border-cyan-100'><strong>חשוב:</strong> בטבלת עלייה/ירידה יש לכלול גם נקודות שבהן הפונקציה או הנגזרת הראשונה אינן מוגדרות.</div></div>", type: "text" },
+                { q: "שלב 5: קמירות/קעירות ופיתול", a: "נגזרת שנייה: $f''(x)=0$", note: "<div class='space-y-2'><div>בודקים את סימן הנגזרת השנייה:</div><ul class='list-disc list-inside text-sm'><li><strong>קמורה (מחייכת):</strong> $f''(x) > 0$.</li><li><strong>קעורה (בוכה):</strong> $f''(x) < 0$.</li></ul><div class='mt-1'><strong>נקודת פיתול:</strong> נקודה שבה הנגזרת השנייה מחליפה סימן.</div><div class='bg-cyan-50 p-2 rounded text-sm border border-cyan-100'><strong>חשוב:</strong> בטבלת קמירות/קעירות יש לחלק את התחום גם לפי נקודות שבהן<br>f(x), f'(x) או f''(x) אינן מוגדרות, בנוסף לנקודות שבהן f''(x)=0.</div></div>", type: "text" },
+                { q: "שלב 6: שרטוט הפונקציה", a: "איסוף הנתונים לגרף", note: "מסמנים את כל הממצאים ומחברים. מסמנים אסימפטוטות, נקודות חיתוך, קיצון ופיתול, ומחברים את הגרף בהתאם לטבלאות שנבנו.", type: "text" }
+            ]
+        }
+    };
+
+    /* --- TAB ORDER --- */
+    const tabOrder = ['limit_strategies', 'limits', 'trig_identities', 'derivative_rules', 'immediate_derivatives', 'integral_strategies', 'integrals', 'integral_applications', 'function_analysis'];
+
+    /* --- EXAM SIMULATION CONTENT --- */
+    const exams = [
+        {
+            title: "סמסטר א' מועד א' שנת 2025",
+            questions: [
+                { 
+                    q: `<strong>שאלה 1:</strong><br>חקור את הפונקציה:<br>$$f(x) = \\frac{2 - x^2}{e^x}$$<br><br>על פי הסעיפים הבאים: תחום הגדרה, נקודות חיתוך עם צירי מערכת הצירים, עלייה וירידה, נקודות קיצון, תחומי קמירות וקעירות, נקודות פיתול, אסימפטוטות, שרטוט.`, 
+                    sol: "<strong>פתרון מלא:</strong><br>1. <strong>תחום:</strong> כל $x$.<br>2. <strong>חיתוך:</strong> $y=0 \\Rightarrow x=\\pm\\sqrt{2}$. $x=0 \\Rightarrow y=2$. נקודות: $(0,2), (\\sqrt{2},0), (-\\sqrt{2},0)$.<br>3. <strong>אסימפטוטות:</strong> $\\lim_{x \\to \\infty} \\frac{2-x^2}{e^x} = 0$ (אופקית $y=0$ בימין). ב $-\\infty$ שואף ל $-\\infty$.<br>4. <strong>נגזרת:</strong> $f'(x) = e^{-x}(-2x - (2-x^2)) = e^{-x}(x^2-2x-2)$.<br>שורשי הנגזרת: $x = \\frac{2\\pm\\sqrt{4+8}}{2} = 1\\pm\\sqrt{3}$.<br>נקודות חשודות: $x_1 \\approx -0.73$ (מקס), $x_2 \\approx 2.73$ (מינ).<br>5. <strong>פיתול:</strong> גוזרים שוב ומקבלים $x^2-4x$. נקודות פיתול ב-0, 4.",
+                    pts: 25 
+                },
+                { 
+                    q: `<strong>שאלה 2:</strong><br>א. חשבו את האינטגרל<br>$$\\int \\frac{2x^2 - 3x - 5}{x^3 + 2x^2 + 5x} \\, dx$$<br>(10%)<br><br>ב. נתונה הסדרה:<br>$$a_1 = 3,\\quad a_{n+1} = \\sqrt{3a_n - 2}$$<br>הוכיחו כי הסדרה מתכנסת וחשבו את גבול הסדרה.<br>(10%)`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> פירוק לשברים חלקיים: המכנה $x(x^2+2x+5)$.<br>$\\frac{2x^2-3x-5}{x(x^2+2x+5)} = \\frac{A}{x} + \\frac{Bx+C}{x^2+2x+5}$.<br>מקבלים $A=-1, B=3, C=-1$.<br>האינטגרל: $-\\ln|x| + \\frac{3}{2}\\ln(x^2+2x+5) - 2\\arctan(\\frac{x+1}{2}) + C$.<br><strong>ב.</strong> נוכיח מונוטונית יורדת וחסומה ע\"י 2.<br>גבול $L = \\sqrt{3L-2} \\Rightarrow L^2-3L+2=0 \\Rightarrow L=1,2$. מכיוון שחסומה מלמטה ע\"י 2, הגבול הוא 2.",
+                    pts: 20 
+                },
+                { 
+                    q: `<strong>שאלה 3:</strong><br>א. חשבו את הגבול הבא:<br>$$\\lim_{x \\to 1} (6 - 5x)\\,\\frac{1}{\\ln(2 - x)}$$<br>(10%)<br><br>ב. חשבו את האינטגרל הבא:<br>$$\\int \\frac{\\sin 3x \\, dx}{2 + \\cos^2 3x}$$<br>(10%)`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> גבול מהצורה $1^\\infty$. נשתמש בזהות אוילר: $e^{\\lim \\frac{(6-5x)-1}{\\ln(2-x)}} = e^{\\lim \\frac{5(1-x)}{\\ln(1+(1-x))}}$.<br>נסמן $t=1-x$. הגבול במעריך הוא 5. תשובה: $e^5$.<br><strong>ב.</strong> הצבה $t = \\cos(3x) \\Rightarrow dt = -3\\sin(3x)dx$.<br>האינטגרל הופך ל $-\\frac{1}{3}\\int \\frac{dt}{2+t^2} = -\\frac{1}{3\\sqrt{2}}\\arctan(\\frac{\\cos 3x}{\\sqrt{2}}) + C$.",
+                    pts: 20 
+                },
+                { 
+                    q: `<strong>שאלה 4:</strong><br>א. חשבו את ערך מקסימום ואת ערך מינימום של הפונקציה<br>$$f(x) = x^2 \\cdot \\sqrt[3]{6x - 7}$$<br>בקטע סגור $[-1,2]$.<br>(10%)<br><br>ב. חשבו את הגבול הבא:<br>$$\\lim_{x \\to 0^+} \\frac{\\int_0^{\\tan x} t^3 \\, dt}{\\int_0^{x^2} \\sin t \\, dt}$$<br>(10%)`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> נגזור ונשווה ל-0. נקודות קריטיות בתוך הקטע + קצוות.<br>קצוות: $f(-1) = \\sqrt[3]{-13}$, $f(2) = 4\\sqrt[3]{5}$.<br>נגזרת: $x(7x-6)(6x-7)^{-2/3}$. נקודה חשודה ב $x=0$ ו $x=6/7$.<br><strong>ב.</strong> לופיטל + המשפט היסודי.<br>מונה נגזר ל: $\\tan^3 x \\cdot \\frac{1}{\\cos^2 x}$. מכנה: $\\sin(x^2) \\cdot 2x$.<br>הגבול שווה $\\frac{1}{2}$.",
+                    pts: 20 
+                },
+                { 
+                    q: `<strong>שאלה 5:</strong><br>א. חשבו את השטח הכלוא בין גרף הפונקציה $y = \\ln x$ לבין הישרים<br>$x = \\frac{2}{e},\\ x = 2e$<br>וציר ה־x.<br>(10%)<br><br>ב. נתונה הפונקציה:<br>$$f(x) =
+\\begin{cases}
+\\displaystyle \\frac{(\\sin \\pi x)^2}{(x - 1)^2}, & x < 1 \\\\
+ b, & x = 1 \\\\
+\\displaystyle \\frac{2a \\ln x}{x - 1}, & x > 1
+\\end{cases}$$<br>מצאו את ערכיהם של הפרמטרים a, b כך שהפונקציה f(x) תהיה רציפה בנקודה $x = 1$.<br>(10%)`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> $\\int_{2/e}^{2e} |\\ln x| dx$. מפצלים ב-1.<br><strong>ב.</strong> גבול משמאל (לופיטל פעמיים או גבול טריגו): $\\pi^2$.<br>גבול מימין: $2a$.<br>כדי שתהיה רציפה: $b = \\pi^2$ וגם $2a = \\pi^2 \\Rightarrow a=\\pi^2/2$.",
+                    pts: 20 
+                },
+                { 
+                    q: `<strong>שאלה 6:</strong><br><br>
+<strong>א.</strong> הוכיחו שמתקיים עבור $$0&lt;a&lt;b&lt;\\frac{\\pi}{2}$$:<br>
+$$
+\\frac{1}{\\cos^2 a}\\cdot\\frac{\\tan b-\\tan a}{b-a}&lt;\\frac{1}{\\cos^2 b}
+$$
+<br>
+<span dir="ltr">(10%)</span>`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> משפט לגראנז' על $f(x)=\\tan x$. נגזרת היא $1/\\cos^2 c$.<br>הנגזרת מונוטונית עולה, לכן $f'(a) < f'(c) < f'(b)$. הטענה בשאלה הפוכה (כנראה טעות בהעתקה או הכוונה לנגזרת שנייה).<br><strong>ב.</strong> $f' = (x-1)^{1/2}$. אורך קשת $L = \\int_1^4 \\sqrt{1+(x-1)} dx = \\int_1^4 \\sqrt{x} dx = [\\frac{2}{3}x^{3/2}]_1^4 = \\frac{14}{3}$.",
+                    pts: 20 
+                }
+            ]
+        },
+        {
+            title: "סמסטר א' מועד ב' שנת 2025",
+            questions: [
+                { 
+                    q: `<strong>שאלה 1:</strong><br>חקרו את הפונקציה:<br>$$f(x)=\\frac{x^2-4x}{x+2}$$<br>על פי הסעיפים הבאים: תחום הגדרה, נקודות חיתוך עם הצירים, תחומי עלייה וירידה, נקודות קיצון, תחומי קמירות וקעירות, נקודות פיתול, אסימפטוטות, שרטוט.`, 
+                    sol: "<strong>פתרון:</strong><br>תחום: $x \\neq -2$.<br>חיתוך: $(0,0), (4,0)$.<br>אסימפטוטה אנכית $x=-2$. משופעת $y=x-6$ (ע\"י חילוק פולינומים).<br>קיצון: נגזרת מתאפסת ב- $x=-2 \\pm \\sqrt{12}$.",
+                    pts: 25 
+                },
+                { 
+                    q: `<strong>שאלה 2:</strong><br>א. חשבו את האינטגרל<br>$(10\\%)$ $$\\int \\frac{x+2}{x^3+4x^2}\\,dx$$<br><br>ב. נתונה הסדרה:<br>$$a_1=3,\\quad a_{n+1}=3-\\frac{2}{a_n}$$<br>הוכיחו כי הסדרה מתכנסת וחשבו את הגבול של הסדרה.`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> $\\frac{x+2}{x^2(x+4)} = \\frac{A}{x} + \\frac{B}{x^2} + \\frac{C}{x+4}$.<br>מקבלים $\\frac{1}{8}\\ln|\\frac{x}{x+4}| - \\frac{1}{2x}$.<br><strong>ב.</strong> חסומה מלמטה ע\"י 2 ומונוטונית יורדת. גבול $L=2$.",
+                    pts: 20 
+                },
+                { 
+                    q: `<strong>שאלה 3:</strong><br>א. חשבו את הגבול הבא:<br>$$\\lim_{x\\to 0}\\frac{\\sin(2x)}{x-\\sin(2x)}.$$<br><br>ב. חשבו את האינטגרל הבא:<br>$$\\int \\frac{\\ln(x)\\,dx}{x\\left(4+\\ln^2(x)\\right)}.$$`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> לופיטל פעמיים או טיילור. $\\frac{2x}{x-(2x - (2x)^3/6)} \\approx \\frac{2x}{4\\frac{x^3}{3}} \\to \\infty$ (הגבול אינו קיים/אינסופי).<br><strong>ב.</strong> הצבה $t=\\ln x, dt=dx/x$. אינטגרל $\\int \\frac{t}{4+t^2}dt = \\frac{1}{2}\\ln(4+\\ln^2 x)$.",
+                    pts: 20 
+                },
+                { 
+                    q: `<strong>שאלה 4:</strong><br>א. מצאו את ערך מקסימלי ואת הערך מינימלי של הפונקציה<br>$$f(x)=x^3\\cdot \\sqrt[3]{x^2-1}$$<br>בקטע סגור $\\left[\\frac{1}{10},1\\right]$.<br>(10%)<br><br>ב. חשבו את הגבול הבא:<br>$(10\\%)$ $$\\lim_{x\\to 0}\\frac{\\int_0^{e^x-1}\\sin(t)\\,dt}{\\int_0^{\\sin(x)}(e^t-1)\\,dt}$$`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> קצוות: $f(1)=0$, $f(0.1)$ שלילי. נגזרת מתאפסת ב- $\\pm \\sqrt{9/11}$.<br><strong>ב.</strong> לופיטל. מונה $\\sim \\sin(x) \\cdot e^x \\approx x$. מכנה $\\sim (e^{\\sin x}-1)\\cos x \\approx x$. התוצאה 1.",
+                    pts: 20 
+                },
+                { 
+                    q: `<strong>שאלה 5:</strong><br>א. חשבו את נפח גוף הסיבוב הנוצר בסיבוב של התחום המשורי הכלוא בין הקווים:<br>$(10\\%)$ $y=x\\sqrt{\\ln(x)},\\ y=0,\\ x=1,\\ x=e$<br>סביב ציר ה-x.<br><br>ב. הוכיחו כי למשוואה<br>$$\\arctan x + x^3 + x^5 - 2 = 0$$<br>קיים שורש ממשי אחד ויחיד`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> $V = \\pi \\int_1^e x^2 \\ln x dx$. בחלקים. תוצאה $\\pi \\frac{2e^3+1}{9}$.<br><strong>ב.</strong> פונקציה רציפה, שואפת ל $\\pm \\infty$ (קיום ע\"י עה\"ב). נגזרת חיובית תמיד (יחידות).",
+                    pts: 20 
+                },
+                { 
+                    q: `<strong>שאלה 6:</strong><br>א. האם הפונקציה<br>$$f(x)=(x-1)^{\\frac{2}{3}}\\sin(x-1)$$<br>גזירה בנקודה $x=1$, נמקו<br><br>ב. הוכיחו כי עבור<br>$$
+0 < x < \\frac{\\pi}{3}
+$$<br>מתקיים:<br>$$
+\\frac{x}{2} < \\sin x < x
+$$<br>(10%)`, 
+                    sol: "<strong>פתרון:</strong><br><strong>א.</strong> הגבול של מנת ההפרשים הוא 0, לכן גזירה.<br><strong>ב.</strong> אי שוויון ימני ידוע. שמאלי: $g(x)=\\sin x - x/2$. נגזרת חיובית בתחום.",
+                    pts: 20 
+                }
+            ]
+        },
+        {
+            title: "סמסטר ב' מועד א' שנת 2025",
+            questions: [
+                { q: `<strong>שאלה 1:</strong><br>א. חקרו את הפונקציה:<br>$$f(x)=\\frac{x^2}{(x-1)^2}$$<br>על פי הסעיפים הבאים: תחום הגדרה, נקודות חיתוך עם ציר ה־x וציר ה־y, תחומי עלייה וירידה, נקודות קיצון, תחומי קמירות וקעירות, נקודות פיתול, אסימפטוטות, שרטוט.<br>(25%)`, sol: "<strong>פתרון:</strong><br>תחום $x \\neq 1$. אסימפטוטה אנכית $x=1$, אופקית $y=1$.<br>נגזרת: $f' = \\frac{-2x}{(x-1)^3}$. קיצון ב-0 (מינימום).", pts: 25 },
+                { q: `<strong>שאלה 2:</strong><br>א. נתונה הסדרה:<br>$$a_{n+1}=\\sqrt[3]{\\frac{2a_n^3+8}{3}},\\quad a_1=1$$<br>הוכיחו כי הסדרה מתכנסת ומצאו את גבולה.<br><br>ב. חשבו את האינטגרל<br>$$\\int \\frac{3x^2+7x+5}{(x+1)(x^2+2x+2)}\\,dx$$`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> מתכנסת ל-2.<br><strong>ב.</strong> פירוק: $\\frac{1}{x+1} + \\frac{2x+3}{x^2+2x+2}$.<br>$\\ln|x+1| + \\ln(x^2+2x+2) + \\arctan(x+1)$.", pts: 20 },
+                { q: `<strong>שאלה 3:</strong><br>א. חשבו את הגבול הבא:<br>$(13\\%)$ $$\\lim_{x\\to 0}\\frac{\\int_0^{\\sin x}\\sin(t)\\,dt}{\\int_0^{\\sin(x)}(e^t-1)\\,dt}$$<br><br>ב. מצאו את משוואת המשיק של גרף הפונקציה<br>$$y=(x-3)^{\\sqrt{x}}$$<br>בנקודה $x=4$.<br>(12%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> לופיטל. שקול ל $\\lim \\frac{\\sin(\\sin x)}{e^{\\sin x}-1} = 1$.<br><strong>ב.</strong> $y(4)=1$. נגזרת לוגריתמית: $y' = y(\\frac{\\ln(x-3)}{2\\sqrt{x}} + \\frac{\\sqrt{x}}{x-3})$. ב-4: $y'=1(0 + 2) = 2$. משיק: $y=2x-7$.", pts: 25 },
+                { q: `<strong>שאלה 4:</strong><br>א. חשבו את הגבול הבא:<br>$(13\\%)$ $$\\lim_{x\\to \\frac{\\pi}{4}}(\\tan x)^{\\tan(2x)}$$<br><br>ב. חשבו את השטח הכלוא בין גרף הפונקציה $y=\\ln x$ לבין הישרים<br>$x=\\frac{2}{e},\\ x=2e$
+וציר ה-x.<br>(12%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> $1^\\infty$. $e^{\\lim \\tan(2x)(\\tan x - 1)} = e^{-1}$.<br><strong>ב.</strong> אינטגרל פשוט של $\\ln x$.", pts: 25 },
+                { q: `<strong>שאלה 5:</strong><br>א. הוכיחו כי מתקיים אי שוויון:<br>$$e^{2\\tan b}-e^{2\\tan a}\\ge 2(b-a)$$<br>עבור $0<a<b<\\frac{\\pi}{2}$.<br>(13%)<br><br>ב. חשבו את האינטגרל הבא:<br>$(12\\%)$ $$\\int \\frac{x^2\\,dx}{(x^3+1)\\sqrt{\\ln(x^3+1)}}$$`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> לגראנז' על $e^{2\\tan x}$. הנגזרת $\\ge 2$.<br><strong>ב.</strong> הצבה $u=\\ln(x^3+1)$. התוצאה $\\frac{2}{3}\\sqrt{\\ln(x^3+1)}$.", pts: 25 },
+                { q: `<strong>שאלה 6:</strong><br>א. חשבו את אורך גרף של הפונקציה<br>$$f(x)=\\frac{x^2}{4}-\\frac{1}{2}\\ln x$$<br>בין $x=1$ ו-$x=e$.<br>(13%)<br><br>ב. נתונה הפונקציה<br>$$f(x)=
+\\begin{cases}
+x^2\\sin\\left(\\frac{1}{x}\\right)+x, & x<0 \\\\
+ax+b, & x\\ge 0
+\\end{cases}$$<br>עבור אילו ערכים של הפרמטרים a,b הפונקציה תהיה רציפה לכל x ממשי.<br>(12%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> $1+(f')^2$ יוצא ריבוע שלם. התוצאה $\\frac{1}{4}(e^2-1) + \\frac{1}{2}$.<br><strong>ב.</strong> משווים גבולות ב-0.", pts: 25 }
+            ]
+        },
+        {
+            title: "סמסטר א' מועד א' שנת 2024",
+            questions: [
+                { q: `<strong>שאלה 1:</strong><br>חקרו את הפונקציה:<br>$$f(x)=\\frac{e^x}{x^2}$$<br>על פי הסעיפים הבאים: תחום הגדרה, נקודות חיתוך עם ציר ה-x וציר ה-y, תחומי עלייה וירידה, נקודות קיצון, תחומי קמירות וקעירות, נקודות פיתול, אסימפטוטות, שרטוט.`, sol: "<strong>פתרון:</strong><br>תחום $x \\neq 0$. אסימפטוטה $x=0, y=0$ (בשמאל).<br>נגזרת $e^x(x-2)/x^3$. מינימום ב $x=2$.", pts: 25 },
+                { q: `<strong>שאלה 2:</strong><br>א. חשבו את האינטגרל<br>$(10\\%)$ $$\\int \\frac{x^2\\,dx}{(x+2)(x^2+1)}$$<br><br>ב. נתונה הסדרה:<br>$$a_1=1,\\quad a_{n+1}=\\frac{6}{5-a_n}$$<br>הוכיחו כי הסדרה מתכנסת וחשבו את גבול הסדרה.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> $\\frac{4}{5(x+2)} + \\frac{x-2}{5(x^2+1)}$.<br><strong>ב.</strong> מתכנסת ל-2 (או 3, תלוי בתנאי ההתחלה).", pts: 20 },
+                { q: `<strong>שאלה 3:</strong><br>א. חשבו את הגבול הבא:<br>$(10\\%)$ $$\\lim_{x\\to 0}\\left(1-\\tan(x)\\right)^{\\frac{1}{\\sin(2x)}}$$<br><br>ב. חשבו את האינטגרל הבא:<br>$(10\\%)$ $$\\int \\frac{\\sin(2x)\\,dx}{3+\\cos^2(2x)}$$`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> $e^{\\lim \\frac{-\\tan x}{\\sin 2x}} = e^{-1/2}$.<br><strong>ב.</strong> הצבה $t=\\cos 2x$. $-\\frac{1}{2}\\int \\frac{dt}{3+t^2}$.", pts: 20 },
+                { q: `<strong>שאלה 4:</strong><br>א. מצאו את ערך מקסימלי ואת הערך מינימלי של הפונקציה<br>$$y=x^{2/3}e^{-x}$$<br>בקטע סגור $[-3,1]$.<br>(10%)<br><br>ב. חשבו את נפח גוף הסיבוב הנוצר בסיבוב של התחום המשורי הכלוא בין הקווים:<br>$$y=\\sqrt{\\arctan(x)},\\ y=0,\\ x=0,\\ x=1$$<br>סביב ציר ה-x.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> נקודות קריטיות: 0 (נגזרת לא קיימת), 2/3. בדיקת קצוות.<br><strong>ב.</strong> $\\pi \\int_0^1 \\arctan x dx$. בחלקים. $\\pi(\\frac{\\pi}{4} - \\frac{1}{2}\\ln 2)$.", pts: 20 },
+                { q: `<strong>שאלה 5:</strong><br>א. חשבו את הגבול הבא:<br>$(10\\%)$ $$\\lim_{x\\to 0^+}\\frac{\\sqrt{x}\\,\\sin(t^2)\\,dt}{x^{3/2}}$$<br><br>ב. נתונה הפונקציה:<br>$$f(x)=
+\\begin{cases}
+x^{-2}\\left(e^{ax}-1\\right)^2, & x<0 \\\\
+ b, & x=0 \\\\
+4+e^{-a^2/x}, & x>0
+\\end{cases}$$<br>מצאו עבור אילו ערכים של הפרמטרים a,b פונקציה f(x) תהיה רציפה בנקודה $x=0$.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> לופיטל. מונה $\\sin x \\cdot \\frac{1}{2\\sqrt{x}}$. גבול $1/3$.", pts: 20 },
+                { q: `<strong>שאלה 6:</strong><br>א. הוכיחו שמתקיים:<br>$$
+\\tan x > x
+$$<br>עבור<br>$$
+0 < x < \\frac{\\pi}{2}
+$$<br>(10%)<br><br>ב. מצאו את השטח הכלוא בין ציר ה-X, גרף של הפונקציה $$y=\\sqrt{2x-5}$$ והמשיק שלו בנקודה $$x=3$$.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> נגזרת $\\tan x - x$ חיובית.<br><strong>ב.</strong> $y(3)=1, y'=1$. משיק $y=x-2$.", pts: 20 }
+            ]
+        },
+        {
+            title: "סמסטר א' מועד ב' שנת 2024",
+            questions: [
+                { q: `<strong>שאלה 1:</strong><br>חקרו את הפונקציה:<br>$$f(x)=\\frac{x^3-1}{(x-1)^2}$$<br>על פי הסעיפים הבאים: תחום הגדרה, חתוך עם הצירים, תחומי עליה וירידה, נקודות קיצון, תחומי קמירות וקעירות, נקודות פיתול, אסימפטוטות, שרטוט.`, sol: "<strong>פתרון:</strong><br>מצטמצם ל $\\frac{x^2+x+1}{x-1}$. $x \\neq 1$.", pts: 25 },
+                { q: `<strong>שאלה 2:</strong><br>א. חשבו את האינטגרל:<br>$$\\int \\frac{x}{(x+1)(x^2+1)}\\,dx$$<br><br>ב. הוכיחו כי \\( \\ln(1+x) < x \\) לכל \\( x>0 \\).`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> $-\\frac{1}{2}\\ln|x+1| + \\frac{1}{4}\\ln(x^2+1) + \\frac{1}{2}\\arctan x$.<br><strong>ב.</strong> $f(x)=x-\\ln(1+x)$ עולה.", pts: 20 },
+                { q: `<strong>שאלה 3:</strong><br><br>
+<strong>א.</strong> נתונה פונקציה:<br>
+$$
+f(x)=
+\\begin{cases}
+\\displaystyle \\frac{\\sin(bx)}{x+\\sin(2x)}, & x<0 \\\\
+2a-7, & x=0 \\\\
+x\\ln x, & x>0
+\\end{cases}
+$$
+<br>
+מצאו (אם קיימים) את כל הערכים לפרמטרים a,b עבורם:<br>
+i. f(x) תהיה רציפה ב-x=0<br>
+ii. x=0 תהיה נק’ אי-רציפות סליקה<br>
+iii. x=0 תהיה נק’ אי-רציפות מסוג ראשון של f(x)<br>
+iv. x=0 תהיה נק’ אי-רציפות מסוג שני של f(x)<br><br>
+אם לא קיימים ערכים כנדרש, רשום ולא קיימים והסבר מדוע.`, sol: "<strong>פתרון:</strong><br>הגבול הוא 1/2.", pts: 20 },
+                { q: `<strong>שאלה 4:</strong><br>א. חשבו את הגבול:<br>$$\\lim_{x\\to 1}\\left(\\frac{1}{\\ln x}-\\frac{1}{x-1}\\right)=$$<br>ב. חשבו את הגבול:<br>$$\\lim_{x\\to 0}\\frac{\\int_0^x \\tan t\\,dt}{x\\sin x}$$`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> 1/2. <strong>ב.</strong> 1/2.", pts: 20 },
+                { q: `<strong>שאלה 5:</strong><br>א. חשבו את האינטגרל:<br>$$\\int (x^2+2x)\\cos(2x)\\,dx$$<br>ב. מצאו את שטח החסום בין הקווים:<br>$$y=x^2+2,\\ y=2x+5,\\ x=0,\\ x=6$$`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> פעמיים בחלקים.<br><strong>ב.</strong> אינטגרל הפרש.", pts: 20 },
+                { q: `<strong>שאלה 6:</strong><br>א. הוכיחו כי למשוואה<br>$$e^x-\\frac{1}{x}-3=0$$<br>יש פתרון יחיד בקטע $(1,1.5)$<br><br>ב. מצאו את המינימום והמקסימום המוחלטים של<br>$$y=\\frac{x^2+5}{x+2}$$<br>בקטע $[0,10]$`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> נגזרת חיובית.", pts: 20 }
+            ]
+        },
+        {
+            title: "סמסטר ב' מועד א' שנת 2024",
+            questions: [
+                { q: `<strong>שאלה 1:</strong><br>חקרו את הפונקציה<br>$$f(x)=x^2e^x$$<br>על פי הסעיפים הבאים: תחום הגדרה, נקודות חיתוך עם הצירים, עלייה וירידה, נקודות קיצון, תחומי קמירות וקעירות, נקודות פיתול, אסימפטוטות, שרטוט.`, sol: "<strong>פתרון:</strong><br>נקודות קיצון ב-0 ו-2-.", pts: 25 },
+                { q: `<strong>שאלה 2:</strong><br>א. חשבו את האינטגרל<br>$(10\\%)$ $$\\int \\frac{x^2+2x+3}{(x-1)(x^2+4x+4)}\\,dx$$<br><br>ב. נתונה הסדרה:<br>$$a_{n+1}=\\sqrt{a_n+20},\\quad a_1=4$$<br>הוכיחו כי הסדרה מתכנסת וחשבו את גבול הסדרה.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>ב.</strong> גבול 5.", pts: 20 },
+                { q: `<strong>שאלה 3:</strong><br>א. חשבו את הגבול הבא:<br>$(10\\%)$ $$\\lim_{n\\to\\infty}\\left(\\frac{n^2+5n-2}{n^2+3n-2}\\right)^n$$<br><br>ב. חשבו את נפח גוף הסיבוב הנוצר בסיבוב התחום המישורי הכלוא בין הקווים:<br>$$y=4-\\sqrt{x},\\ y=x-2,\\ x=2$$<br>סביב ציר ה-X.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> $e^2$.", pts: 20 },
+                { q: `<strong>שאלה 4:</strong><br>א. מצאו את הערך המקסימלי ואת הערך המינימלי של פונקציה:<br>$$y=xe^{\\frac{1}{x}}$$<br>בקטע הסגור<br>$$\\left[\\frac{1}{2},3\\right]$$<br>(10%)<br><br>ב. נתונה הפונקציה:<br>$$f(x)=\\sqrt{2-2x}$$<br>חשבו את המשיק לגרף הפונקציה בעל שיפוע $-\\frac{1}{2}$. מצאו את השטח התחום בין הפונקציה, המשיק, וציר ה-X.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> גזירה.", pts: 20 },
+                { q: `<strong>שאלה 5:</strong><br>א. חשבו את האינטגרל הבא:<br>$(10\\%)$ $$\\int \\frac{\\ln x\\ dx}{x(\\ln^2 x+1)}$$<br>ב. נתונה הפונקציה:<br>$$f(x)=
+\\begin{cases}
+\\displaystyle \\frac{\\arctan(2x)}{x}, & x<0 \\\\
+ax+b, & 0\\le x\\le 2 \\\\
+\\displaystyle 4\\left(\\frac{x-\\sqrt{3x-2}}{x-2}\\right), & x>2
+\\end{cases}$$<br>מצאו לאילו ערכים של a,b (ממשיים) $$f(x)$$ תהיה רציפה לכל $$x$$ ממשי.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> $\\frac{1}{2}\\ln(\\ln^2 x + 1)$.", pts: 20 },
+                { q: `<strong>שאלה 6:</strong><br>א. הוכיחו כי למשוואה $2^{\\sqrt{x}}+\\arctan(2x)=5$ קיים פתרון ממשי אחד בלבד.<br>(10%)<br><br>ב. חשבו את הגבול הבא:<br>$(10\\%)$ $$\\lim_{x\\to 0^+}\\frac{x^4}{\\int_0^{x^2} t\\cos(t^2)\\,dt}$$`, sol: "<strong>פתרון:</strong><br>חקירה.", pts: 20 }
+            ]
+        },
+        {
+            title: "סמסטר ב' מועד ב' שנת 2024",
+            questions: [
+                { q: `<strong>שאלה 1:</strong><br>חקרו את הפונקציה<br>$$f(x)=\\frac{x^3}{x^2-1}$$<br>על פי הסעיפים הבאים: תחום הגדרה, נקודות חיתוך עם הצירים, תחומי עליה וירידה, נקודות קיצון, תחומי קמירות וקעירות, נקודות פיתול, אסימפטוטות, שרטוט.`, sol: "<strong>פתרון:</strong><br>אי זוגית. אסימפטוטות $\\pm 1, y=x$.", pts: 25 },
+                { q: `<strong>שאלה 2:</strong><br>א. חשבו את האינטגרל<br>$(10\\%)$ $$\\int \\frac{x^2+8}{x^4+4x^2}\\,dx$$<br><br>ב. נתונה הסדרה:<br>$$a_{n+1}=\\frac{3}{2+\\frac{1}{a_n}},\\quad a_1=2$$<br>הוכיחו כי הסדרה מתכנסת וחשבו את גבול הסדרה.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>ב.</strong> גבול 1.", pts: 20 },
+                { q: `<strong>שאלה 3:</strong><br>א. חשבו את הגבול הבא:<br>$(10\\%)$ $$\\lim_{n\\to\\infty}\\left(\\sqrt{1+n+n^2}-\\sqrt{1-2n+n^2}\\right)$$<br><br>ב. חשבו את נפח גוף הסיבוב הנוצר בסיבוב התחום המישורי הכלוא בין הקווים:<br>$$y=e^x+1,\\ y=e+1,\\ x=0$$<br>סביב ציר ה-Y.<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> 3/2.", pts: 20 },
+                { q: `<strong>שאלה 4:</strong><br>א. מצאו את הערך המקסימלי ואת הערך המינימלי של פונקציה:<br>$$y=\\ln^2 x-2\\ln x$$<br>בקטע הסגור $[\\sqrt{e},e^2]$.<br>(10%)<br><br>ב. מצאו לאילו ערכים של a,b (ממשיים) מתקיים:<br>$(10\\%)$ $$\\lim_{x\\to +\\infty}\\left(\\frac{3x^4}{x^3+2x+9}-ax-b\\right)=0$$`, sol: "<strong>פתרון:</strong><br>הצבה.", pts: 20 },
+                { q: `<strong>שאלה 5:</strong><br>א. נתונה הפונקציה:<br>$$f(x)=
+\\begin{cases}
+e^{-\\frac{x|x+2|}{(x+2)^2}}, & x<-2 \\\\
+x+3, & -2\\le x\\le 0 \\\\
+\\arctan\\left(\\frac{1}{x}\\right), & x>0
+\\end{cases}$$<br>מצאו את נקודות אי הרציפות שלה, ציינו את סוג אי הרציפות בנקודה.<br>(10%)<br><br>ב. חשבו את האינטגרל הבא:<br>$(10\\%)$ $$\\int x\\cdot \\cos(x^2)\\,dx$$`, sol: "<strong>פתרון:</strong><br><strong>ב.</strong> $\\frac{1}{2}\\sin(x^2)$.", pts: 20 },
+                { q: `<strong>שאלה 6:</strong><br>א. הוכיחו כי לכל x ממשי מתקיים אי השוויון<br>$$e^x \\ge x+1$$<br>(10%)<br><br>ב. מצאו את השטח התחום החסום בין הגרפים של הפונקציות:<br>$$y=\\frac{1}{x},\\ y=x,\\ y=4$$<br>(10%)`, sol: "<strong>פתרון:</strong><br>אינטגרציה.", pts: 20 }
+            ]
+        },
+        {
+            title: "סמסטר א' מועד א' שנת 2023",
+            questions: [
+                { q: `<strong>שאלה 1:</strong><br>חקרו את הפונקציה:<br>$$f(x)=\\frac{x-1}{\\sqrt{x^2+1}}$$<br>על פי הסעיפים הבאים: תחום הגדרה, נקודות חיתוך עם הצירים, תחומי עליה וירידה, נקודות קיצון, תחומי קמירות וקעירות, נקודות פיתול, אסימפטוטות, שרטוט.`, sol: "<strong>פתרון:</strong><br>אין אסימפטוטה אנכית. אופקיות $\\pm 1$.", pts: 25 },
+                { q: `<strong>שאלה 2:</strong><br>א. נתונה הסדרה:<br>$$a_{n+1}=\\sqrt{2a_n-1},\\quad a_1=2$$<br>הוכיחו שהסדרה מונוטונית וחסומה ומצאו את גבולה.<br><br>ב. חשבו את האינטגרל הבא:<br>$(10\\%)$ $$\\int \\frac{dx}{\\sin(x)+3}$$`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> גבול 1. <strong>ב.</strong> הצבה אוניברסלית.", pts: 20 },
+                { q: `<strong>שאלה 3:</strong><br><br>
+<strong>א.</strong> הוכיחו את האי-שוויון: כאשר x&gt;0 מתקיים<br>
+$$
+\\frac{x}{1+x^2} &lt; \\arctan x &lt; x
+$$
+<br>
+<span dir="ltr">(10%)</span><br><br>
+ב. חשבו את הגבול הבא:<br>
+(10%) $$\\lim_{x\\to 0}\\left(\\frac{1-x+x^2}{2-3x+x^2}\\right)^{\\frac{x}{2}}$$`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> (רמז) השתמשו במשפט הערך הממוצע/לגראנז' על $\\arctan$.<br><strong>ב.</strong> חישוב סטנדרטי לגבול מסוג $1^\\infty$ מוביל לתשובה $1$.", pts: 20 },
+                { q: `<strong>שאלה 4:</strong><br>א. הוכיחו כי לפונקציה $y(x)=\\int_1^{x^4}\\frac{\\cos\\sqrt{t}}{\\sqrt[8]{t}}\\,dt$ מקסימום מקומי בנקודה<br>$$x=\\sqrt{\\frac{\\pi}{2}}$$<br>(10%)<br><br>ב. חשבו את אורך הקשת של הפונקציה:<br>$$y=\\frac{2\\sqrt{x^3}}{3}-\\frac{\\sqrt{x}}{2},\\quad 0\\le x\\le 4$$<br>(10%)`, sol: "<strong>פתרון:</strong><br><strong>א.</strong> גזירה לפי המשפט היסודי. <strong>ב.</strong> $14/3$.", pts: 20 },
+                { q: `<strong>שאלה 5:</strong><br>א. בדקו האם הפונקציה:<br>$$f(x)=(x-1)^{\\frac{2}{3}}\\sin(x-1)$$<br>גזירה בנקודה $x=1$. אם כן, מצאו את נגזרתה, אם לא, נמקו.<br>(10%)<br><br>ב. חשבו את נפח הגוף הנוצר על-ידי סיבוב סביב ציר ה-Y של התחום המישורי הכלוא בין הקווים הבאים:<br>$$y=\\sin^2 x,\\ y=\\cos^2 x$$<br>כאשר $0\\le x\\le \\frac{\\pi}{4}$.<br>(10%)`, sol: "<strong>פתרון:</strong><br>בדיקה לפי הגדרה.", pts: 20 },
+                { q: `<strong>שאלה 6:</strong><br>א. חשבו את האינטגרל הבא:<br>$(10\\%)$ $$\\int \\frac{(3x^2+x+9)\\,dx}{(x-1)(x^2+4x+8)}$$<br><br>ב. נתונות הפונקציות $y=x^3-x^2-2x+16$ ו- $y=3x^2+x-2$ משיקית זו לזו בנקודה מסוימת. מצאו את נקודת ההשקה ואת משוואות המשיקים.<br>(10%)`, sol: "<strong>פתרון:</strong><br>שברים חלקיים.", pts: 20 }
+            ]
+        }
+    ];
+
+    /* --- LOGIC VARIABLES --- */
+    let currentMode = 'study';
+    let examQueue = [];
+    let currentIndex = 0;
+    let score = 0;
+    let simInterval;
+    let timeRemaining = 10800;
+
+    /* --- INIT --- */
+    let mjxScheduleTimer = null;
+    let mjxScriptLoadPromise = null;
+    function waitForMathJaxScript() {
+        if (mjxScriptLoadPromise) return mjxScriptLoadPromise;
+        const script = document.getElementById('MathJax-script');
+        if (script && script.dataset && script.dataset.mjxLoaded) {
+            mjxScriptLoadPromise = Promise.resolve();
+            return mjxScriptLoadPromise;
+        }
+        mjxScriptLoadPromise = new Promise(resolve => {
+            if (!script) { resolve(); return; }
+            const done = () => resolve();
+            if (script.complete) { done(); return; }
+            script.addEventListener('load', () => {
+                if (script.dataset) script.dataset.mjxLoaded = '1';
+                done();
+            }, { once: true });
+        });
+        return mjxScriptLoadPromise;
+    }
+
+    function scheduleMathJaxTypeset(rootEl) {
+        if (!rootEl) return;
+        if (mjxScheduleTimer) clearTimeout(mjxScheduleTimer);
+        mjxScheduleTimer = setTimeout(async () => {
+            mjxScheduleTimer = null;
+            let retries = 6;
+            while (rootEl && retries > 0) {
+                const style = window.getComputedStyle(rootEl);
+                if (style && style.display !== 'none' && style.visibility !== 'hidden') break;
+                await new Promise(r => requestAnimationFrame(r));
+                retries -= 1;
+            }
+            await waitForMathJaxScript();
+            if (window.MathJax?.startup?.promise) {
+                await MathJax.startup.promise;
+            }
+            if (window.MathJax?.typesetPromise) {
+                await MathJax.typesetPromise([rootEl]);
+            }
+        }, 0);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        setupTabs();
+        loadCategory('limit_strategies');
+        renderExamSelector();
+        scheduleMathJaxTypeset(document.getElementById('content-area'));
+        const contentArea = document.getElementById('content-area');
+        if (contentArea) {
+            const observer = new MutationObserver(() => {
+                scheduleMathJaxTypeset(contentArea);
+            });
+            observer.observe(contentArea, { childList: true, subtree: true });
+        }
+    });
+
+    /* --- RENDER EXAM SELECTOR --- */
+    function renderExamSelector() {
+        const container = document.getElementById('exams-grid');
+        if (!container) return;
+        container.innerHTML = '';
+        
+        exams.forEach((exam, idx) => {
+            let icon = "description";
+            let color = "indigo";
+            if(exam.title.includes("חשמל")) { icon = "bolt"; color = "amber"; }
+            
+            const btn = document.createElement('button');
+            btn.className = "bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-1 border border-slate-200 flex flex-col items-center group";
+            btn.onclick = () => startSpecificExam(idx);
+            
+            btn.innerHTML = `
+                <div class="w-16 h-16 rounded-full bg-${color}-100 text-${color}-600 flex items-center justify-center mb-4 group-hover:bg-${color}-600 group-hover:text-white transition">
+                    <span class="material-symbols-outlined text-3xl">${icon}</span>
+                </div>
+                <h3 class="font-bold text-xl mb-1 text-center dir-rtl">${exam.title}</h3>
+                <p class="text-sm text-slate-500">שאלון מלא + פתרון</p>
+            `;
+            container.appendChild(btn);
+        });
+    }
+
+    /* --- MODE SWITCHING --- */
+    function switchMode(mode) {
+        const views = { study: document.getElementById('study-view'), exam: document.getElementById('exam-view'), sim: document.getElementById('sim-view') };
+        const btns = { study: document.getElementById('btn-study'), exam: document.getElementById('btn-exam'), sim: document.getElementById('btn-sim') };
+
+        Object.values(views).forEach(el => el.classList.add('hidden'));
+        btns.study.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap text-indigo-100 hover:text-white";
+        btns.exam.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap text-indigo-100 hover:text-white";
+        btns.sim.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap text-rose-200 hover:text-white hover:bg-rose-600/50";
+
+        if (currentMode === 'sim' && mode !== 'sim') {
+            if (!document.getElementById('sim-active').classList.contains('hidden')) {
+                if (!confirm("האם אתה בטוח שברצונך לצאת? המבחן יתאפס.")) return;
+                exitSimulation();
+            }
+        }
+
+        currentMode = mode;
+
+        if (mode === 'study') {
+            views.study.classList.remove('hidden');
+            btns.study.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap bg-white text-indigo-700 shadow";
+            scheduleMathJaxTypeset(views.study);
+        } else if (mode === 'exam') {
+            views.exam.classList.remove('hidden');
+            btns.exam.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap bg-white text-indigo-700 shadow";
+            startExam();
+            scheduleMathJaxTypeset(views.exam);
+        } else if (mode === 'sim') {
+            views.sim.classList.remove('hidden');
+            btns.sim.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap bg-rose-600 text-white shadow";
+            document.getElementById('sim-selector').classList.remove('hidden');
+            document.getElementById('sim-active').classList.add('hidden');
+            renderExamSelector();
+            scheduleMathJaxTypeset(views.sim);
+        }
+    }
+
+    /* --- STUDY LOGIC --- */
+    function setupTabs() {
+        const container = document.getElementById('category-tabs');
+        container.innerHTML = '';
+        tabOrder.forEach((key, idx) => {
+            const data = infiniData[key];
+            const btn = document.createElement('button');
+            const isActive = idx === 0;
+            btn.className = `flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap ${isActive ? `bg-${data.color}-100 text-${data.color}-800 border-${data.color}-200 ring-2 ring-${data.color}-500 ring-offset-1` : `bg-white text-slate-600 border-slate-200 hover:bg-slate-50`}`;
+            btn.innerHTML = `<span class="material-symbols-outlined text-lg">${data.icon}</span>${data.title}`;
+            btn.onclick = () => {
+                document.querySelectorAll('#category-tabs button').forEach(b => b.className = b.className.replace(/bg-.*-100|ring-2|ring-offset-1/g, '').replace('text-slate-600', '').replace('bg-white', '') + ' bg-white text-slate-600 border-slate-200');
+                btn.className = `flex items-center gap-2 px-5 py-2.5 rounded-full border transition-all font-bold text-sm whitespace-nowrap bg-${data.color}-100 text-${data.color}-800 border-${data.color}-200 ring-2 ring-${data.color}-500 ring-offset-1`;
+                loadCategory(key);
+            };
+            container.appendChild(btn);
+        });
+    }
+
+    function loadCategory(key) {
+        const container = document.getElementById('content-area');
+        const data = infiniData[key];
+        const isTrig = key === 'trig_identities';
+        const wrapperClass = isTrig ? ' trig-identities' : '';
+        let html = `<div class="max-w-5xl mx-auto animate-fade-in pb-10${wrapperClass}"><div class="flex items-center gap-4 mb-6"><div class="w-12 h-12 rounded-2xl bg-${data.color}-100 text-${data.color}-600 flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-3xl">${data.icon}</span></div><div><h2 class="text-2xl font-bold text-slate-800">${data.title}</h2><div class="text-sm text-slate-500 mt-1">גלול למטה להמשך</div></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">`;
+        data.items.forEach(item => {
+            let qContent;
+            // Force text type for specific questions
+            if (key === 'function_analysis' || (key === 'limit_strategies' && (item.q.includes('סנדוויץ') || item.q.includes('אפסה כפול חסומה'))) || (key === 'derivative_rules' && item.q.includes('גזירת אינטגרל'))) {
+                qContent = `<div class="text-xl font-bold text-slate-800 w-full text-center px-2 q-text">${item.q}</div>`;
+            } else {
+                if (isTrig) {
+                    qContent = `<div class="text-xl font-bold text-slate-800 font-math dir-ltr w-full text-center px-2 identity-title">\\(${item.q}\\)</div>`;
+                } else {
+                    qContent = `<div class="text-xl font-bold text-slate-800 font-math dir-ltr w-full text-center overflow-x-auto no-scrollbar px-2">$${item.q}$</div>`;
+                }
+            }
+            
+            let aContent;
+            // Special case for Integral Derivative ANSWER (should be math)
+            if (key === 'trig_identities') {
+                aContent = `<div class="text-lg font-bold text-${data.color}-600 text-center w-full px-2 dir-rtl leading-relaxed" dir="rtl" style="unicode-bidi: plaintext;">${item.a}</div>`;
+            }
+            else if (key === 'derivative_rules' && item.q.includes('גזירת אינטגרל')) {
+                aContent = `<div class="text-lg md:text-xl text-${data.color}-600 font-bold mb-3 font-math dir-ltr text-center w-full overflow-x-auto px-2 pb-2">$${item.a}$</div>`;
+            }
+            else if (item.type === 'text') {
+                aContent = `<div class="text-lg font-bold text-${data.color}-600 text-center w-full px-2 dir-rtl leading-relaxed">${item.a}</div>`;
+            } else {
+            if (key === 'limit_strategies' && (item.q.includes('סנדוויץ') || item.q.includes('אפסה כפול חסומה'))) {
+                     aContent = `<div class="text-lg md:text-xl text-${data.color}-600 font-bold mb-3 font-math dir-ltr text-center w-full overflow-x-auto px-2 pb-2">$${item.a}$</div>`;
+                } else {
+                     aContent = `<div class="text-lg md:text-xl text-${data.color}-600 font-bold mb-3 font-math dir-ltr text-center w-full overflow-x-auto px-2 pb-2">$${item.a}$</div>`;
+                }
+            }
+            
+            const cardClass = isTrig ? ' identity-card' : '';
+            const headerClass = isTrig ? ' identity-card-header' : '';
+            html += `<div class="bg-white rounded-xl shadow-sm border border-slate-100 flex flex-col group overflow-hidden hover:shadow-md transition${cardClass}">
+                <div class="h-24 bg-slate-50 border-b border-slate-100 flex items-center justify-center p-4 relative${headerClass}"><div class="absolute inset-0 bg-${data.color}-50 opacity-0 group-hover:opacity-100 transition"></div><div class="relative z-10 w-full flex justify-center">${qContent}</div></div>
+                <div class="p-5 flex-1 flex flex-col items-center w-full min-w-0">${aContent}${item.note ? `<div class="mt-auto w-full pt-3 border-t border-dashed border-slate-200"><div class="text-sm text-slate-500 bg-slate-50 p-2 rounded leading-relaxed text-right dir-rtl">${item.note}</div></div>` : ''}</div>
+            </div>`;
+        });
+        html += `</div></div>`;
+        container.innerHTML = html;
+        scheduleMathJaxTypeset(container);
+        if (window.MathJax) {
+            MathJax.typesetPromise([container]).then(() => {
+                if (isTrig) {
+                    requestAnimationFrame(() => adjustTrigIdentityTitles(container));
+                }
+            });
+        }
+    }
+
+    function adjustTrigIdentityTitles(container) {
+        const titles = container.querySelectorAll('.trig-identities .identity-title');
+        titles.forEach(title => {
+            title.classList.remove('identity-title--small');
+            const parent = title.parentElement;
+            if (!parent) return;
+            const parentRect = parent.getBoundingClientRect();
+            const titleRect = title.getBoundingClientRect();
+            const isOverflowing = title.scrollWidth > title.clientWidth || titleRect.right > parentRect.right + 1;
+            if (isOverflowing) {
+                title.classList.add('identity-title--small');
+            }
+        });
+    }
+
+    /* --- EXAM LOGIC --- */
+    function startExam() {
+        examQueue = [];
+        Object.keys(infiniData).forEach(key => {
+            const cat = infiniData[key];
+            cat.items.forEach(item => {
+            const isTxtQ = (key === 'function_analysis' || (key === 'limit_strategies' && (item.q.includes('סנדוויץ') || item.q.includes('אפסה כפול חסומה'))) || (key === 'derivative_rules' && item.q.includes('גזירת אינטגרל')));
+                const isTxtA = item.type === 'text' && !(key === 'derivative_rules' && item.q.includes('גזירת אינטגרל'));
+                
+                examQueue.push({ 
+                    ...item, 
+                    catTitle: cat.title, 
+                    isTxtAnswer: isTxtA, 
+                    isTxtQuestion: isTxtQ,
+                    icon: cat.icon 
+                });
+            });
+        });
+        examQueue.sort(() => Math.random() - 0.5);
+        currentIndex = 0; score = 0;
+        document.getElementById('total-q-num').innerText = examQueue.length;
+        renderCard(0);
+    }
+
+    function renderCard(idx) {
+        if(idx >= examQueue.length) { showSummary(); return; }
+        const item = examQueue[idx];
+        document.querySelector('.card-flip').classList.remove('flipped');
+        document.getElementById('current-q-num').innerText = idx + 1;
+        document.getElementById('card-category').innerText = item.catTitle;
+        const qContainer = document.getElementById('card-question');
+        if (item.isTxtQuestion) { 
+             qContainer.innerHTML = item.q;
+             qContainer.className = "text-3xl md:text-4xl font-bold text-slate-800 text-center leading-relaxed w-full px-2 py-4 q-text";
+        } else {
+             qContainer.innerHTML = `$${item.q}$`;
+             qContainer.className = "text-3xl md:text-4xl font-bold text-slate-800 text-center leading-relaxed font-math w-full overflow-x-auto px-2 py-4 dir-ltr";
+        }
+        setTimeout(() => {
+            const ansEl = document.getElementById('card-answer');
+            if (item.isTxtAnswer) {
+                 ansEl.innerHTML = item.a;
+                 ansEl.className = "text-xl font-bold text-indigo-900 text-center mb-6 leading-relaxed dir-rtl w-full px-2";
+            } else {
+                 ansEl.innerHTML = `$${item.a}$`;
+                 ansEl.className = "text-xl md:text-2xl font-bold text-indigo-900 text-center mb-6 leading-relaxed font-math w-full overflow-x-auto px-2 dir-ltr";
+            }
+            const noteEl = document.getElementById('card-note');
+            noteEl.innerHTML = item.note || "";
+            noteEl.className = "text-base md:text-lg text-slate-600 px-4 leading-relaxed shrink-0 w-full text-right dir-rtl";
+            if(window.MathJax) MathJax.typesetPromise();
+        }, 250);
+        if(window.MathJax) MathJax.typesetPromise();
+    }
+
+    function nextCard(known) { if(known) score++; currentIndex++; renderCard(currentIndex); }
+    function flipCard() { document.querySelector('.card-flip').classList.toggle('flipped'); }
+    function restartExam() { startExam(); }
+    function showSummary() { document.getElementById('exam-view').innerHTML = `<div class="text-center"><h2 class="text-3xl font-bold">סיימת!</h2><p class="text-xl">ציון: ${Math.round(score/examQueue.length*100)}</p><button onclick="location.reload()" class="bg-indigo-600 text-white px-4 py-2 mt-4 rounded">התחל מחדש</button></div>`; }
+
+    /* --- SIMULATION --- */
+    function startSpecificExam(index) {
+        document.getElementById('sim-selector').classList.add('hidden');
+        document.getElementById('sim-active').classList.remove('hidden');
+        document.getElementById('sim-active').classList.add('flex');
+        const exam = exams[index];
+        document.getElementById('exam-subtitle').innerText = exam.title;
+        document.getElementById('exam-title-display').innerText = exam.title;
+        const container = document.getElementById('sim-questions');
+        container.innerHTML = '';
+        exam.questions.forEach((q, idx) => {
+            const div = document.createElement('div');
+            div.className = "border border-slate-200 rounded-lg p-6 bg-slate-50 hover:bg-white transition-colors sim-text q-part";
+            
+            // Note: Added q-text class to container to enforce RTL, and inline q-math spans.
+            div.innerHTML = `
+                <div class="flex justify-between items-start mb-4">
+                    <div class="font-bold text-lg text-slate-800 q-text">שאלה ${idx + 1} ${idx === 0 ? '<span class="text-rose-600 text-sm mr-2">(חובה)</span>' : ''}</div>
+                    <div class="bg-slate-200 text-slate-600 text-xs px-2 py-1 rounded font-mono dir-ltr">${q.pts} pts</div>
+                </div>
+                <!-- Important: q-text enforces RTL for Hebrew, while MathJax handles math LTR automatically inside $$ -->
+                <div class="text-xl mb-6 text-slate-800 border-b border-dashed border-slate-300 pb-4 q-text">
+                    ${q.q}
+                </div>
+                <textarea class="w-full h-32 p-3 border border-slate-300 rounded-md bg-white text-right dir-rtl" placeholder="טיוטה..."></textarea>
+                <div class="solution-box hidden mt-6 bg-emerald-50 border border-emerald-200 rounded-lg p-4 animate-fade-in text-right dir-rtl">
+                    <div class="text-emerald-800 font-bold mb-2 flex items-center gap-2">
+                        <span class="material-symbols-outlined">check_circle</span> פתרון מלא:
+                    </div>
+                    <!-- Sol also needs q-text for mixed content -->
+                    <div class="text-lg text-slate-800 q-text">${q.sol}</div>
+                </div>
+            `;
+            container.appendChild(div);
+        });
+        if(window.MathJax) MathJax.typesetPromise();
+        timeRemaining = 10800; clearInterval(simInterval); simInterval = setInterval(() => { timeRemaining--; const h=Math.floor(timeRemaining/3600).toString().padStart(2,'0'),m=Math.floor((timeRemaining%3600)/60).toString().padStart(2,'0'),s=(timeRemaining%60).toString().padStart(2,'0'); document.getElementById('timer-display').innerText=`${h}:${m}:${s}`; if(timeRemaining<=0) finishSimulation(); }, 1000);
+    }
+    function exitSimulation() { clearInterval(simInterval); document.getElementById('sim-active').classList.add('hidden'); document.getElementById('sim-active').classList.remove('flex'); document.getElementById('sim-selector').classList.remove('hidden'); }
+    function finishSimulation() { clearInterval(simInterval); document.querySelectorAll('.solution-box').forEach(el => el.classList.remove('hidden')); document.getElementById('sim-paper').scrollTo({top:0, behavior:'smooth'}); alert("המבחן הסתיים!"); }
+    function downloadPage() { const blob=new Blob([document.documentElement.outerHTML],{type:'text/html'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='infini_master_2026.html'; document.body.appendChild(a); a.click(); document.body.removeChild(a); }
+</script>
+<style>@keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } } .animate-fade-in { animation: fade-in 0.4s ease-out forwards; }</style>
+
+</body></html>
