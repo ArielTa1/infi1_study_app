@@ -1418,11 +1418,22 @@ mjx-c.mjx-c1D45B.TEX-I::before {
                 { q: "שלב 5: קמירות/קעירות ופיתול", a: "נגזרת שנייה: $f''(x)=0$", note: "<div class='space-y-2'><div>בודקים את סימן הנגזרת השנייה:</div><ul class='list-disc list-inside text-sm'><li><strong>קמורה (מחייכת):</strong> $f''(x) > 0$.</li><li><strong>קעורה (בוכה):</strong> $f''(x) < 0$.</li></ul><div class='mt-1'><strong>נקודת פיתול:</strong> נקודה שבה הנגזרת השנייה מחליפה סימן.</div><div class='bg-cyan-50 p-2 rounded text-sm border border-cyan-100'><strong>חשוב:</strong> בטבלת קמירות/קעירות יש לחלק את התחום גם לפי נקודות שבהן<br>f(x), f'(x) או f''(x) אינן מוגדרות, בנוסף לנקודות שבהן f''(x)=0.</div></div>", type: "text" },
                 { q: "שלב 6: שרטוט הפונקציה", a: "איסוף הנתונים לגרף", note: "מסמנים את כל הממצאים ומחברים. מסמנים אסימפטוטות, נקודות חיתוך, קיצון ופיתול, ומחברים את הגרף בהתאם לטבלאות שנבנו.", type: "text" }
             ]
+        },
+        important_theorems: {
+            title: "משפטים חשובים", icon: "verified", color: "purple",
+            items: [
+                { q: "משפט ערך הביניים", a: "אם $f$ רציפה ב־$[a,b]$ ולכל $k$ בין $f(a)$ ל־$f(b)$, קיים $c\\in[a,b]$ כך ש־$f(c)=k$.", note: "<strong>מתי משתמשים במבחן:</strong><br>להבטיח קיום פתרון או ערך ביניים בין שני ערכים ידועים.", type: "text" },
+                { q: "משפט ויירשטראס (קיום מקסימום ומינימום)", a: "אם $f$ רציפה ב־$[a,b]$ אז קיימים $x_{\\max},x_{\\min}\\in[a,b]$ כך ש־$f(x_{\\max})\\ge f(x)$ ו־$f(x_{\\min})\\le f(x)$ לכל $x\\in[a,b]$.", note: "<strong>מתי משתמשים במבחן:</strong><br>כשרוצים להראות שקיים מקסימום ומינימום בקטע סגור.", type: "text" },
+                { q: "משפט רול", a: "אם $f$ רציפה ב־$[a,b]$, גזירה ב־$(a,b)$ ו־$f(a)=f(b)$, אז קיים $c\\in(a,b)$ כך ש־$f'(c)=0$.", note: "<strong>מתי משתמשים במבחן:</strong><br>להראות שקיימת נקודת קיצון פנימית עם נגזרת אפס.", type: "text" },
+                { q: "משפט לגראנז׳ (ערך ממוצע)", a: "אם $f$ רציפה ב־$[a,b]$ וגזירה ב־$(a,b)$, אז קיים $c\\in(a,b)$ כך ש־$f'(c)=\\frac{f(b)-f(a)}{b-a}$.", note: "<strong>מתי משתמשים במבחן:</strong><br>לקשר בין שינוי ממוצע של פונקציה לבין נגזרת בנקודה.", type: "text" },
+                { q: "משפט פרמה", a: "אם ל־$f$ יש נקודת קיצון פנימית ב־$c$ והיא גזירה בנקודה, אז $f'(c)=0$.", note: "<strong>מתי משתמשים במבחן:</strong><br>לסמן נקודות חשודות לקיצון לפני בדיקת סימן.", type: "text" },
+                { q: "משפט טיילור (ניסוח קצר)", a: "אם $f$ גזירה $n$ פעמים בסביבה של $a$, אז $f(x)=\\sum_{k=0}^{n}\\frac{f^{(k)}(a)}{k!}(x-a)^k + R_n(x)$.", note: "<strong>מתי משתמשים במבחן:</strong><br>לקירוב פונקציה בסביבת נקודה ולהערכת שגיאה.", type: "text" }
+            ]
         }
     };
 
     /* --- TAB ORDER --- */
-    const tabOrder = ['limit_strategies', 'limits', 'trig_identities', 'derivative_rules', 'immediate_derivatives', 'integral_strategies', 'integrals', 'integral_applications', 'function_analysis'];
+    const tabOrder = ['limit_strategies', 'limits', 'trig_identities', 'derivative_rules', 'immediate_derivatives', 'integral_strategies', 'integrals', 'integral_applications', 'function_analysis', 'important_theorems'];
 
     /* --- EXAM SIMULATION CONTENT --- */
     const exams = [
@@ -1824,7 +1835,7 @@ $$
         data.items.forEach(item => {
             let qContent;
             // Force text type for specific questions
-            if (key === 'function_analysis' || (key === 'limit_strategies' && (item.q.includes('סנדוויץ') || item.q.includes('אפסה כפול חסומה'))) || (key === 'derivative_rules' && item.q.includes('גזירת אינטגרל'))) {
+            if (key === 'function_analysis' || key === 'important_theorems' || (key === 'limit_strategies' && (item.q.includes('סנדוויץ') || item.q.includes('אפסה כפול חסומה'))) || (key === 'derivative_rules' && item.q.includes('גזירת אינטגרל'))) {
                 qContent = `<div class="text-xl font-bold text-slate-800 w-full text-center px-2 q-text">${item.q}</div>`;
             } else {
                 if (isTrig) {
