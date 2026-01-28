@@ -181,6 +181,20 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             button, input, select, textarea { min-height: 44px; font-size: 16px; }
         }
 
+        @media (max-width: 768px) {
+            html, body { height: 100%; overflow: hidden; }
+            #study-view, #exam-view, #sim-view { height: 100%; }
+            #content-area { flex: 1 1 auto; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+            #content-area { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+            #exam-view, #sim-paper { overflow: visible; height: auto; }
+            #content-area .group.overflow-hidden { overflow: visible !important; }
+            .bg-white.rounded-xl,
+            .card-inner,
+            .card-front,
+            .card-back,
+            .card-back .flex-1 { overflow: visible !important; height: auto !important; max-height: none !important; }
+        }
+
         /* Math overflow handling */
         #content-area mjx-container,
         #exam-view mjx-container,
