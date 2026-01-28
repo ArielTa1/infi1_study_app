@@ -120,7 +120,10 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             header [class*="bg-indigo-800/50"] { flex-wrap: wrap; overflow: visible; }
             header [class*="bg-indigo-800/50"] button { min-height: 44px; padding: 0.5rem 0.75rem; white-space: normal; }
             header .container { gap: 0.75rem; flex-wrap: wrap; }
-            main { overflow-x: hidden; }
+            body { min-height: 100dvh; min-height: -webkit-fill-available; height: 100dvh; }
+            main { overflow-x: hidden; overflow-y: auto; min-height: 100dvh; min-height: -webkit-fill-available; padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
+            #study-view, #exam-view, #sim-view { height: auto; min-height: 100dvh; min-height: -webkit-fill-available; }
+            #content-area, #sim-paper { overflow: visible; }
             #content-area { padding: 0.75rem; }
             #content-area .grid { grid-template-columns: 1fr; gap: 0.75rem; }
             #content-area .bg-white.rounded-xl { width: 100%; }
@@ -130,7 +133,10 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             #exam-view { padding: 0.75rem; }
             #exam-view .flex.justify-between.items-end { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
             #exam-view .flex.gap-4.h-16 { flex-direction: column; height: auto; gap: 0.75rem; }
+            #exam-view .flex.gap-4.h-16 { position: sticky; bottom: 0; background: #f1f5f9; padding: 0.5rem; padding-bottom: calc(0.5rem + env(safe-area-inset-bottom)); z-index: 20; border-top: 1px solid #e2e8f0; }
             #exam-view .flex.gap-4.h-16 button { width: 100%; min-height: 44px; }
+            #exam-view .w-full.max-w-xl { max-height: none; height: auto; }
+            #exam-view .card-flip { flex: 0 0 auto; min-height: 320px; }
             #exam-view .card-front, #exam-view .card-back { padding: 1rem; }
             #sim-active .sticky-timer { flex-direction: column; align-items: stretch; gap: 0.75rem; }
             #sim-active .sticky-timer .text-2xl { font-size: 1.25rem; }
@@ -140,6 +146,12 @@ var m=["material-icons","material-symbols-outlined","material-symbols-rounded","
             #sim-paper .bg-white { padding: 1rem; }
             #sim-paper .text-center.border-b-2 { padding-bottom: 1rem; margin-bottom: 1.25rem; }
             #sim-questions { gap: 1.5rem; }
+            #exams-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+            #exams-grid button { padding: 0.75rem; min-height: 64px; }
+            #exams-grid h3 { font-size: 0.95rem; line-height: 1.3; }
+            #exams-grid p { font-size: 0.75rem; }
+            #exams-grid .w-16 { width: 2.75rem; height: 2.75rem; }
+            #exams-grid .text-3xl { font-size: 1.25rem; line-height: 1.2; }
             button, input, select, textarea { min-height: 44px; font-size: 16px; }
         }
 
@@ -1591,11 +1603,28 @@ $$
             }
         }, 0);
     }
+    async function typesetAllVisibleMath() {
+        await waitForMathJaxScript();
+        if (window.MathJax?.startup?.promise) {
+            await MathJax.startup.promise;
+        }
+        const views = [
+            document.getElementById('study-view'),
+            document.getElementById('exam-view'),
+            document.getElementById('sim-view')
+        ];
+        const visible = views.find(el => el && !el.classList.contains('hidden'));
+        const target = visible || document.getElementById('content-area');
+        if (window.MathJax?.typesetPromise && target) {
+            await MathJax.typesetPromise([target]);
+        }
+    }
     document.addEventListener('DOMContentLoaded', () => {
         setupTabs();
         loadCategory('limit_strategies');
         renderExamSelector();
         scheduleMathJaxTypeset(document.getElementById('content-area'));
+        requestAnimationFrame(() => requestAnimationFrame(() => typesetAllVisibleMath()));
         const contentArea = document.getElementById('content-area');
         if (contentArea) {
             const observer = new MutationObserver(() => {
@@ -1603,6 +1632,12 @@ $$
             });
             observer.observe(contentArea, { childList: true, subtree: true });
         }
+    });
+    window.addEventListener('load', () => {
+        requestAnimationFrame(() => requestAnimationFrame(() => typesetAllVisibleMath()));
+    });
+    window.addEventListener('pageshow', () => {
+        requestAnimationFrame(() => requestAnimationFrame(() => typesetAllVisibleMath()));
     });
 
     /* --- RENDER EXAM SELECTOR --- */
@@ -1654,11 +1689,13 @@ $$
             views.study.classList.remove('hidden');
             btns.study.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap bg-white text-indigo-700 shadow";
             scheduleMathJaxTypeset(views.study);
+            requestAnimationFrame(() => requestAnimationFrame(() => typesetAllVisibleMath()));
         } else if (mode === 'exam') {
             views.exam.classList.remove('hidden');
             btns.exam.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap bg-white text-indigo-700 shadow";
             startExam();
             scheduleMathJaxTypeset(views.exam);
+            requestAnimationFrame(() => requestAnimationFrame(() => typesetAllVisibleMath()));
         } else if (mode === 'sim') {
             views.sim.classList.remove('hidden');
             btns.sim.className = "flex items-center gap-1 md:gap-2 px-3 py-1.5 rounded-lg text-sm font-bold transition-all whitespace-nowrap bg-rose-600 text-white shadow";
@@ -1666,6 +1703,7 @@ $$
             document.getElementById('sim-active').classList.add('hidden');
             renderExamSelector();
             scheduleMathJaxTypeset(views.sim);
+            requestAnimationFrame(() => requestAnimationFrame(() => typesetAllVisibleMath()));
         }
     }
 
@@ -1742,6 +1780,7 @@ $$
                 }
             });
         }
+        requestAnimationFrame(() => requestAnimationFrame(() => typesetAllVisibleMath()));
     }
 
     function adjustTrigIdentityTitles(container) {
