@@ -12,7 +12,7 @@ The app centralizes all the material needed for the course in one place, with cl
 You can open the app directly using the GitHub Pages link:
 
 👉 **[Open the app in your browser]**  
-https://arielta1.github.io/infi1_study_app/infini_master_2026_fixed.html)
+https://arielta1.github.io/infi1_study_app/infini_master_2026_fixed.html
 
 No installation required.
 
